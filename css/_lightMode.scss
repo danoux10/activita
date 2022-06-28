@@ -1,0 +1,18 @@
+body.light{
+  background: $medium;
+  color:$dark;
+  header#navbar{
+    nav{
+      ul{
+        border-color:$light-blue;
+        li{
+          &:hover,&.active{
+            color:$medium-blue;
+          }
+        }
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,19 @@
+body.dark{
+  background: $deep-blue;
+  color:$light;
+  header#navbar{
+    nav{
+      ul{
+        border-color: $dark-blue;
+        li{
+          &:hover,&.active{
+            color:$medium-blue;
+          }
+          &#night:hover{
+
+          }
+        }
+      }
+    }
+  }
+}

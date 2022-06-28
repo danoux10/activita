@@ -1,0 +1,151 @@
+body {
+  transition: all ease 0.5s;
+}
+
+#navbar {
+  margin: 0.5% 0;
+}
+#navbar nav {
+  display: flex;
+  justify-content: center;
+}
+#navbar nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: large;
+  border-bottom: 2px solid;
+  width: 50%;
+  border-radius: 50px;
+}
+#navbar nav ul li {
+  cursor: pointer;
+  transition: visibility ease 0.5s;
+}
+
+main {
+  padding: 0 0.2%;
+  height: 93vh;
+  position: relative;
+  display: flex;
+  transition: all ease 0.5s;
+}
+main section {
+  margin: 0 0.5%;
+}
+main .btn-container ul {
+  display: flex;
+  flex-direction: column;
+}
+main .btn-container ul li {
+  border: 1px solid;
+  border-radius: 50px;
+  text-align: center;
+  font-size: x-large;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+main .btn-container ul li:nth-child(2n) {
+  margin: 1.25rem 0;
+}
+main .btn-container ul li.active {
+  background: #35858b;
+  border-color: #aefeff;
+  transition: background ease 0.5s;
+}
+main .btn-container ul li:hover {
+  color: #aefeff;
+  border: 2px solid;
+  background: #000000;
+  transition: background, color ease 0.5s;
+}
+
+main#Graph section table th, main#Graph section table td, main#Graph section table tr {
+  border: 1px solid;
+  text-align: center;
+}
+main#Graph section div.table-content {
+  transition: all ease 0.5s;
+}
+main#Graph section div.table-content::-webkit-scrollbar {
+  height: 0px;
+  width: 5px;
+  border: 1px solid;
+  border-radius: 100px;
+}
+main#Graph section div.table-content::-webkit-scrollbar-thumb {
+  width: 5px;
+  border-radius: 100px;
+  background: white;
+}
+main#Graph section#graph-content div.graph-container #graphique {
+  transition: all ease 0.5s;
+}
+main#Graph section#graphForm-content div.form-container form {
+  transition: all ease 0.5s;
+}
+main#Graph section#graphForm-content div.form-container form fieldset {
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  transition: all ease 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  border-radius: 20px;
+}
+main#Graph section#graphForm-content div.form-container form fieldset input, main#Graph section#graphForm-content div.form-container form fieldset select, main#Graph section#graphForm-content div.form-container form fieldset textarea {
+  color: #FFFFff;
+  border: 1px solid #35858b;
+  background: none;
+}
+main#Graph section#graphForm-content div.form-container form fieldset input[type=date], main#Graph section#graphForm-content div.form-container form fieldset input[type=time], main#Graph section#graphForm-content div.form-container form fieldset select {
+  text-align: center;
+}
+main#Graph section#graphForm-content div.form-container form fieldset input[type=date]::-webkit-calendar-picker-indicator, main#Graph section#graphForm-content div.form-container form fieldset input[type=time]::-webkit-calendar-picker-indicator, main#Graph section#graphForm-content div.form-container form fieldset select::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+main#Graph section#graphForm-content div.form-container form fieldset legend {
+  border-right: 2px solid;
+  border-left: 2px solid;
+  padding: 0 2%;
+  border-radius: 50px;
+}
+main#Graph section#graphForm-content div.form-container form fieldset #dataSelect fieldset {
+  display: flex;
+  align-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main#Graph section#graphForm-content div.form-container form fieldset button {
+  border: 1px solid;
+  border-radius: 50px;
+  padding: 0.5% 1%;
+}
+
+body.light {
+  background: #c0c0c0;
+  color: #000000;
+}
+body.light header#navbar nav ul {
+  border-color: #aefeff;
+}
+body.light header#navbar nav ul li:hover, body.light header#navbar nav ul li.active {
+  color: #4fbdba;
+}
+
+body.dark {
+  background: #150b3b;
+  color: #FFFFff;
+}
+body.dark header#navbar nav ul {
+  border-color: #35858b;
+}
+body.dark header#navbar nav ul li:hover, body.dark header#navbar nav ul li.active {
+  color: #4fbdba;
+}
+
+/*# sourceMappingURL=style.css.map */

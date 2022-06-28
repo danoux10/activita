@@ -1,0 +1,166 @@
+body {
+  transition: all ease .5s;
+}
+
+//link general navbar
+#navbar {
+  margin: .5% 0;
+
+  nav {
+    display: flex;
+    justify-content: center;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: large; //move responsive
+      border-bottom: 2px solid;
+      width: 50%; //move responsive
+      border-radius: 50px;
+
+      li {
+        cursor: pointer;
+        transition: visibility ease .5s;
+      }
+    }
+  }
+}
+
+//link main
+main {
+  padding: 0 .2%;
+  height: 93vh; //move responsive
+  position: relative;
+  display: flex;
+  transition: all ease .5s;
+  section {
+    margin: 0 .5%;
+  }
+
+  .btn-container {
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        border: 1px solid;
+        border-radius: 50px;
+        text-align: center;
+        font-size: x-large;
+        cursor: pointer;
+        width: 2.5rem;
+        height: 2.5rem;
+
+        &:nth-child(2n) {
+          margin: 1.25rem 0;
+        }
+
+        &.active {
+          background: $dark-blue;
+          border-color: $light-blue;
+          transition: background ease .5s;
+        }
+
+        &:hover {
+          color: $light-blue;
+          border: 2px solid;
+          background: $dark;
+          transition: background, color ease .5s;
+        }
+      }
+    }
+  }
+}
+
+
+main#Graph {
+  section {
+    table {
+      th, td, tr {
+        border: 1px solid;
+        text-align: center;
+      }
+    }
+
+    div.table-content {
+      transition: all ease .5s;
+
+      &::-webkit-scrollbar {
+        height: 0px;
+        width: 5px;
+        border: 1px solid;
+        border-radius: 100px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 5px;
+        border-radius: 100px;
+        background: white;
+      }
+    }
+  }
+
+  section#graph-content {
+    div.graph-container {
+      #graphique {
+        transition: all ease .5s;
+      }
+    }
+  }
+
+  section#graphForm-content {
+    div.form-container {
+      form {
+        transition: all ease .5s;
+
+        fieldset {
+          border-top: 2px solid;
+          border-bottom: 2px solid;
+          transition: all ease .5s;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          height: 100%;
+          border-radius: 20px;
+
+          input, select, textarea {
+            color: $light;
+            border: 1px solid $dark-blue;
+            background: none;
+          }
+
+          input[type="date"], input[type="time"], select {
+            text-align: center;
+
+            &::-webkit-calendar-picker-indicator {
+              filter: invert(1);
+            }
+          }
+
+          legend {
+            border-right: 2px solid;
+            border-left: 2px solid;
+            padding: 0 2%;
+            border-radius: 50px;
+          }
+
+          #dataSelect fieldset {
+            display: flex;
+            align-content: space-around;
+            flex-direction: column;
+            justify-content: space-around;
+          }
+
+          button {
+            border: 1px solid;
+            border-radius: 50px;
+            padding: .5% 1%;
+          }
+        }
+      }
+    }
+  }
+}
