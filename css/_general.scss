@@ -27,13 +27,72 @@ body {
   }
 }
 
+//link button graph
+nav.nav-button{
+  position:absolute;
+  top: 1%;
+  width:100%;
+  div{
+    cursor: pointer;
+    border-radius: 10px;
+    padding:0 5px;
+    width:6%;
+    transition: width,background ease .5s;
+    border: 1px solid $medium-blue;
+    p{
+      text-align: center;
+      transition: all ease .5s;
+    }
+    i{
+      transition: all ease .5s;
+    }
+    &:hover{
+      background: $medium-blue;
+      color:black;
+      transition:background ease .5s;
+      i{
+        transform:rotate(180deg);
+      }
+    }
+    &.active{
+      border-radius:50px;
+      height:30px;
+      width:30px;
+      justify-content: center;
+      background: $dark-blue;
+      p{
+        width:0;
+        overflow: hidden;
+      }
+      i{
+        transform:rotate(180deg);
+      }
+      &:hover{
+        background: $medium-blue;
+        i{
+          transform:rotate(360deg);
+        }
+      }
+    }
+  }
+  div:nth-child(1){
+    left:10%;
+  }
+
+  div:nth-child(2){
+    flex-direction: row-reverse;
+    right: 10%;
+  }
+}
+
 //link main
 main {
+  display: flex;
   padding: 0 .2%;
   height: 93vh; //move responsive
   position: relative;
-  display: flex;
   transition: all ease .5s;
+
   section {
     margin: 0 .5%;
   }
@@ -72,10 +131,11 @@ main {
     }
   }
 }
-
-
+//sublink graph
 main#Graph {
+
   section {
+    transition: all ease .5s;
     table {
       th, td, tr {
         border: 1px solid;
@@ -87,7 +147,7 @@ main#Graph {
       transition: all ease .5s;
 
       &::-webkit-scrollbar {
-        height: 0px;
+        height: 0;
         width: 5px;
         border: 1px solid;
         border-radius: 100px;
@@ -125,6 +185,88 @@ main#Graph {
           text-align: center;
           height: 100%;
           border-radius: 20px;
+          //link select
+          .select {
+            width: 48%;
+
+            .select-box {
+              text-align: left;
+              display: flex;
+              flex-direction: column;
+              position: relative;
+              cursor: pointer;
+              width: 100%;
+
+              .options-container {
+                width: 100%;
+                order: 1;
+                overflow: scroll;
+                height: 20vh;
+                background: gray;
+                position: absolute;
+                top: 3vh;
+                z-index: 1;
+                opacity: 0;
+                max-height: 0;
+                border: 1px solid red;
+                border-top: 0;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+
+                &.active {
+                  opacity: 1;
+                  max-height: 100px;
+                  transition: all ease .5s;
+
+                  + {
+                    .selected:after {
+                      transform: rotateX(180deg);
+                    }
+                  }
+                }
+
+                &::-webkit-scrollbar {
+                  width: 10px;
+                  height: 0;
+                  background: black;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                  background: crimson;
+                  width: 100%;
+                  border-radius: 50px;
+                }
+
+                .option {
+                  cursor: pointer;
+                  padding: 1%;
+
+                  input[type='radio'] {
+                    display: none;
+                  }
+                }
+              }
+
+              .selected {
+                border: 1px solid;
+                position: relative;
+                order: 0;
+                cursor: pointer;
+                border-radius: 10px;
+                padding: 2%;
+                display: flex;
+                justify-content: space-between;
+
+                &::after {
+                  text-align: center;
+                  content: "▼";
+                  height: 100%;
+                }
+
+              }
+            }
+          }
+
 
           input, select, textarea {
             color: $light;
@@ -158,9 +300,55 @@ main#Graph {
             border: 1px solid;
             border-radius: 50px;
             padding: .5% 1%;
+            //link valid btn
+            &.btn-valid{
+              border-color: #00ff00;
+              background: #008800;
+            }
+            //link cancel & delete
+            &.btn-cancel, &.btn-delete{
+              border-color:#ff0000;
+              background: #880000;
+            }
+            //link update btn
+            &.btn-update{
+              border-color:#ffff00;
+              background: #888800;
+            }
+            //link download btn
+            &.btn-download{
+              border-color: #008800;
+              background: #009e08;
+            }
+
+            &:hover {
+              animation: sphere 3s ease infinite;
+
+              i {
+                animation: shake 2s ease infinite;
+              }
+            }
+
+            &.download-btn {
+              overflow: hidden;
+
+              &:hover {
+                i {
+                  animation: download 5s ease infinite;
+                }
+              }
+            }
+          }
+        }
+        &#data-select{
+          .select{
+            width: 70%;
           }
         }
       }
     }
   }
 }
+
+
+

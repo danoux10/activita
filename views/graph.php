@@ -1,7 +1,8 @@
 <?php require './controller/function/table.php';?>
+<?php require './controller/function/select.php';?>
 
 <main class="w-screen" id="Graph">
-    <section class="w-3/6 h-full flex items-center justify-center " id="graph-content">
+    <section class="w-3/6 h-full flex items-center justify-center" id="graph-content">
         <div class="graph-container w-11/12 h-full ">
             <div id="graphique">
                 <div id="bar-content">
@@ -31,12 +32,12 @@
         <div class="form-container w-11/12 h-full flex flex-col items-center justify-center content-around">
             <div class="h-1/2 w-full mt-5 flex items-center justify-center" id="form-content">
               <div class="flex">
-	              <?php include_once "models/form/add_data.html"; ?>
-                  <?php include_once "models/form/modify_data.html"; ?>
+	              <?php include_once "models/form/add_data.php"; ?>
+                  <?php include_once "models/form/modify_data.php"; ?>
               </div>
-                  <?php include_once "models/form/select-data.html"; ?>
+                  <?php include_once "models/form/select-data.php"; ?>
             </div>
-            <div id="data-today" class="w-full table-content mt-16 overflow-scroll flex">
+            <div id="data-today" class="w-10/12 table-content mt-16 overflow-scroll flex">
 	            <?php
                   echo tableDay();
                 ?>

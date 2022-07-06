@@ -9,3 +9,36 @@
 		</ul>
 	</nav>
 </header>
+
+<nav id="buttonGraph" class="nav-button">
+    <div class="flex items-center justify-around absolute" id="graphBtn">
+        <i class="fa-solid fa-angle-left"></i>
+        <p class="w-full">Graph View</p>
+    </div>
+    <div class="flex items-center justify-around absolute" id="graphFormBtn">
+        <i class="fa-solid fa-angle-right"></i>
+        <p class="w-full">Form View</p>
+    </div>
+</nav>
+
+<nav id="buttonCard" class="nav-button">
+    <div class="flex items-center justify-around absolute" id="cardBtn">
+        <i class="fa-solid fa-angle-left"></i>
+        <p class="w-full">Card View</p>
+    </div>
+    <div class="flex items-center justify-around absolute" id="cardFormBtn">
+        <i class="fa-solid fa-angle-right"></i>
+        <p class="w-full">Form View</p>
+    </div>
+</nav>
+
+<nav id="buttonIcon" class="nav-button">
+    <div class="flex items-center justify-around absolute" id="iconBtn">
+        <i class="fa-solid fa-angle-left"></i>
+        <p class="w-full">Icon View</p>
+    </div>
+    <div class="flex items-center justify-around absolute" id="iconFormBtn">
+        <i class="fa-solid fa-angle-right"></i>
+        <p class="w-full">Form View</p>
+    </div>
+</nav>

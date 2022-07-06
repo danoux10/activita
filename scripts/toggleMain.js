@@ -8,12 +8,19 @@ const graph = document.getElementById('Graph');
 const card = document.getElementById('Cards');
 const icon = document.getElementById('Icon');
 
+const buttonGraph = document.getElementById('buttonGraph');
+const buttonCard = document.getElementById('buttonCard');
+const buttonIcon = document.getElementById('buttonIcon');
+
 graphBtn.classList.add('active');
 
 if(graphBtn.classList.contains('active')){
     card.classList.add('w-0','h-0','scale-0');
     icon.classList.add('w-0','h-0','scale-0');
     title.innerText="graph";
+    buttonGraph.classList.remove('hidden');
+    buttonCard.classList.add('hidden');
+    buttonIcon.classList.add('hidden');
 }
 
 function showGraph(){
@@ -24,6 +31,10 @@ function showGraph(){
         graph.classList.remove('w-0','h-0','scale-0');
         card.classList.add('w-0','h-0','scale-0');
         icon.classList.add('w-0','h-0','scale-0');
+
+        buttonGraph.classList.remove('hidden');
+        buttonCard.classList.add('hidden');
+        buttonIcon.classList.add('hidden');
 
         title.innerText="graph";
     }
@@ -38,6 +49,10 @@ function showCard(){
         card.classList.remove('w-0','h-0','scale-0');
         icon.classList.add('w-0','h-0','scale-0');
 
+        buttonGraph.classList.add('hidden');
+        buttonCard.classList.remove('hidden');
+        buttonIcon.classList.add('hidden');
+
         title.innerText="card";
     }
 }
@@ -50,6 +65,10 @@ function showIcon(){
         graph.classList.add('w-0','h-0','scale-0');
         card.classList.add('w-0','h-0','scale-0');
         icon.classList.remove('w-0','h-0','scale-0');
+
+        buttonGraph.classList.add('hidden');
+        buttonCard.classList.add('hidden');
+        buttonIcon.classList.remove('hidden');
 
         title.innerHTML="icon";
     }

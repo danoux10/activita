@@ -1,0 +1,54 @@
+@keyframes download{
+  from{
+    transform:translateY(0%);
+  }
+  50%{
+    transform:translateY(150%);
+  }
+  to{
+    transform: rotate(180deg) translateY(0%);
+  }
+}
+
+@keyframes sphere{
+  from{
+    border-radius: 50px;
+  }
+  50%{
+    border-radius: 10px;
+  }
+  to{
+    border-radius:50px;
+  }
+}
+
+@keyframes shake{
+  from{
+    transform: rotate(20deg);
+  }
+  50%{
+    transform: rotate(-20deg)
+  }
+  to{
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes closeLeft{
+  from{
+
+  }
+  25%{
+
+  }
+  75%{
+
+  }
+  to{
+
+  }
+}
+
+@keyframes rotateLeft{
+
+}

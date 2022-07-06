@@ -40,6 +40,7 @@ $dataSelects ='20';
 			$tableDay .="<th>Heure End</th>";
 			$tableDay .="<th>Duration</th>";
 			$tableDay .="<th>Description</th>";
+			$tableDay .="<th>Select</th>";
 			$tableDay .="</tr>";
 			$tableDay.="</thead>";
 			for ($i=0; $i<$dataSelects; $i++) {
@@ -51,6 +52,7 @@ $dataSelects ='20';
 				$tableDay .="<td>11:00</td>";
 				$tableDay.="<td>01:00</td>";
 				$tableDay .="<td>projet activiter $i</td>";
+				$tableDay .="<td><input type='radio' name='selectTab' id='$i'></td>";
 				$tableDay .="</tr>";
 				$tableDay .="</tbody>";
 			}

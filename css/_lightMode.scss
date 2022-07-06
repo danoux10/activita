@@ -1,18 +1,16 @@
 body.light{
-  background: $medium;
+  background: $light-blue;
   color:$dark;
   header#navbar{
     nav{
       ul{
-        border-color:$light-blue;
+        border-color:$light-purple;
         li{
           &:hover,&.active{
-            color:$medium-blue;
+            color:$medium-purple;
           }
         }
       }
     }
   }
-
-
 }

@@ -7,6 +7,7 @@ module.exports = {
         "./models/form/**/*.{html,php,js}",
         "./scripts//**/*.{html,php,js}",
         "./views/**/*.{html,php,js}",
+        "./test/**/*.{html,php,js}",
     ],
     theme: {
         extend: {},
