@@ -1,5 +1,6 @@
 <?php
 $dataSelects ='20';
+		//link table Select Act
     function tableSelect() {
         global $dataSelects;
         $tableSelect = "<table id='tableSelect'>";
@@ -29,6 +30,7 @@ $dataSelects ='20';
         return $tableSelect;
     };
 		
+		//link table today
 		function tableDay(){
 			global $dataSelects;
 			$tableDay = "<table id='tableSelect' class='w-full'>";

@@ -46,6 +46,7 @@ nav.nav-button{
     i{
       transition: all ease .5s;
     }
+    //sublink hover
     &:hover{
       background: $medium-blue;
       color:black;
@@ -54,6 +55,7 @@ nav.nav-button{
         transform:rotate(180deg);
       }
     }
+    //sublink active mode
     &.active{
       border-radius:50px;
       height:30px;
@@ -67,6 +69,7 @@ nav.nav-button{
       i{
         transform:rotate(180deg);
       }
+      //anchor active hover
       &:hover{
         background: $medium-blue;
         i{
@@ -75,10 +78,11 @@ nav.nav-button{
       }
     }
   }
+  //sublink btn left position
   div:nth-child(1){
     left:10%;
   }
-
+  //sublink btn right position
   div:nth-child(2){
     flex-direction: row-reverse;
     right: 10%;
@@ -92,11 +96,11 @@ main {
   height: 93vh; //move responsive
   position: relative;
   transition: all ease .5s;
-
+  //sublink section
   section {
     margin: 0 .5%;
   }
-
+  //sublink btn container
   .btn-container {
     ul {
       display: flex;
@@ -114,13 +118,13 @@ main {
         &:nth-child(2n) {
           margin: 1.25rem 0;
         }
-
+        //anchor active mode
         &.active {
           background: $dark-blue;
           border-color: $light-blue;
           transition: background ease .5s;
         }
-
+        //anchor hover mode
         &:hover {
           color: $light-blue;
           border: 2px solid;
@@ -133,16 +137,17 @@ main {
 }
 //sublink graph
 main#Graph {
-
+  //anchor graph>section
   section {
     transition: all ease .5s;
+    //subanchor table
     table {
       th, td, tr {
         border: 1px solid;
         text-align: center;
       }
     }
-
+    //subanchor table content
     div.table-content {
       transition: all ease .5s;
 
@@ -161,6 +166,7 @@ main#Graph {
     }
   }
 
+  //anchor graph content
   section#graph-content {
     div.graph-container {
       #graphique {
@@ -169,8 +175,10 @@ main#Graph {
     }
   }
 
+  //anchor graphForm content
   section#graphForm-content {
     div.form-container {
+      //subanchor form
       form {
         transition: all ease .5s;
 
@@ -196,7 +204,7 @@ main#Graph {
               position: relative;
               cursor: pointer;
               width: 100%;
-
+              //sublink option-containt select
               .options-container {
                 width: 100%;
                 order: 1;
@@ -212,7 +220,7 @@ main#Graph {
                 border-top: 0;
                 border-bottom-left-radius: 10px;
                 border-bottom-right-radius: 10px;
-
+                //anchor select activer mode
                 &.active {
                   opacity: 1;
                   max-height: 100px;
@@ -246,7 +254,7 @@ main#Graph {
                   }
                 }
               }
-
+              //anchor select selected
               .selected {
                 border: 1px solid;
                 position: relative;
@@ -267,13 +275,14 @@ main#Graph {
             }
           }
 
-
+          //sublink input select textarea
           input, select, textarea {
             color: $light;
             border: 1px solid $dark-blue;
             background: none;
           }
 
+          //sublink input date & time
           input[type="date"], input[type="time"], select {
             text-align: center;
 
@@ -282,6 +291,7 @@ main#Graph {
             }
           }
 
+          //sublink legend
           legend {
             border-right: 2px solid;
             border-left: 2px solid;
@@ -289,6 +299,7 @@ main#Graph {
             border-radius: 50px;
           }
 
+          //sublink dataSelect
           #dataSelect fieldset {
             display: flex;
             align-content: space-around;
@@ -296,31 +307,32 @@ main#Graph {
             justify-content: space-around;
           }
 
+          //sublink button
           button {
             border: 1px solid;
             border-radius: 50px;
             padding: .5% 1%;
-            //link valid btn
+            //anchor valid btn
             &.btn-valid{
               border-color: #00ff00;
               background: #008800;
             }
-            //link cancel & delete
+            //anchor cancel & delete
             &.btn-cancel, &.btn-delete{
               border-color:#ff0000;
               background: #880000;
             }
-            //link update btn
+            //anchor update btn
             &.btn-update{
               border-color:#ffff00;
               background: #888800;
             }
-            //link download btn
+            //anchor download btn
             &.btn-download{
               border-color: #008800;
               background: #009e08;
             }
-
+            //anchor hover mode
             &:hover {
               animation: sphere 3s ease infinite;
 
@@ -331,7 +343,6 @@ main#Graph {
 
             &.download-btn {
               overflow: hidden;
-
               &:hover {
                 i {
                   animation: download 5s ease infinite;
