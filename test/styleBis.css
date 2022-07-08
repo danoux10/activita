@@ -1,83 +1,95 @@
-@charset "UTF-8";
-body::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+button {
+  border: 1px solid;
+  border-radius: 50px;
+  padding: 0.5% 1%;
+}
+button.btn-valid {
+  border-color: #00ff00;
+  background: #008800;
+}
+button.btn-cancel, button.btn-delete {
+  border-color: #ff0000;
+  background: #880000;
+}
+button.btn-update {
+  border-color: #ffff00;
+  background: #888800;
+}
+button.btn-download {
+  border-color: #008800;
+  background: #009e08;
+}
+button:hover {
+  animation: sphere 3s ease infinite;
+}
+button:hover i {
+  animation: shake 2s ease infinite;
 }
 
-main {
-  justify-content: center;
-}
-
-.select {
-  width: 48%;
-}
-.select .select-box {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  cursor: pointer;
-  width: 100%;
-}
-.select .select-box .options-container {
-  width: 100%;
-  order: 1;
-  overflow: scroll;
-  height: 20vh;
-  background: gray;
-  position: absolute;
-  top: 3vh;
-  z-index: 1;
-  opacity: 0;
-  max-height: 0;
-  border: 1px solid red;
-  border-top: 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-.select .select-box .options-container.active {
-  opacity: 1;
-  max-height: 100px;
-  transition: all ease 0.5s;
-}
-.select .select-box .options-container.active + .selected:after {
-  transform: rotateX(180deg);
-}
-.select .select-box .options-container::-webkit-scrollbar {
+.table-body::-webkit-scrollbar {
   width: 10px;
   height: 0;
-  background: black;
+  border: 1px solid;
+  border-radius: 50px;
 }
-.select .select-box .options-container::-webkit-scrollbar-thumb {
-  background: crimson;
+.table-body::-webkit-scrollbar-thumb {
+  background: white;
   width: 100%;
   border-radius: 50px;
 }
-.select .select-box .options-container .option {
-  cursor: pointer;
-  padding: 1%;
+
+.element-title, .element-body {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid;
+  border-left: 1px solid;
 }
-.select .select-box .options-container .option input[type=radio] {
-  display: none;
+.element-title:nth-child(1), .element-title:nth-child(3), .element-title:nth-child(4), .element-title:nth-child(5), .element-body:nth-child(1), .element-body:nth-child(3), .element-body:nth-child(4), .element-body:nth-child(5) {
+  width: 100px;
 }
-.select .select-box .selected {
-  border: 1px solid;
-  position: relative;
-  order: 0;
-  cursor: pointer;
-  border-radius: 10px;
-  padding: 2%;
+.element-title:nth-child(2), .element-title:nth-child(6), .element-body:nth-child(2), .element-body:nth-child(6) {
+  width: 150px;
+}
+.element-title:nth-child(7), .element-body:nth-child(7) {
+  width: 50px;
+}
+
+.table-head {
+  padding-right: 10px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-top-right-radius: 10px;
+  margin-top: 1%;
+}
+
+.element-body:nth-child(7) {
+  border-right: none;
+}
+
+.table-head, .table-line {
   display: flex;
   justify-content: space-between;
 }
-.select .select-box .selected::after {
-  text-align: center;
-  content: "▼";
-  height: 100%;
+
+.table-line {
+  margin: 0.5% 0;
+  max-height: 4rem;
+  border-bottom: 1px solid;
+}
+.table-line:nth-child(1) {
+  border: 1px solid;
 }
 
-#data-select .select {
-  width: 70%;
+.table {
+  padding: 0;
+}
+
+.table-line .element-body:nth-child(6) {
+  padding: 0.1% 0.5%;
+  display: block;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=styleBis.css.map */
