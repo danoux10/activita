@@ -42,6 +42,15 @@ function toggleAddData(){
         formData.classList.add('justify-around');
         formData.classList.remove('justify-center');
     }
+    if(!addDataBtn.classList.contains('active')&&!updateDataBtn.classList.contains('active')&&!selectData.classList.contains('active')){
+       tableData.classList.add('h-full');
+       tableData.classList.remove('h-1/2');
+       formData.classList.remove('h-1/2');
+    }else{
+        tableData.classList.add('h-1/2');
+        tableData.classList.remove('h-full');
+        formData.classList.add('h-1/2');
+    }
 }
 
 function toggleUpdateData(){
@@ -66,6 +75,15 @@ function toggleUpdateData(){
         formData.classList.add('justify-around');
         formData.classList.remove('justify-center');
     }
+    if(!addDataBtn.classList.contains('active')&&!updateDataBtn.classList.contains('active')&&!selectData.classList.contains('active')){
+        tableData.classList.add('h-full');
+        tableData.classList.remove('h-1/2');
+        formData.classList.remove('h-1/2');
+    }else{
+        tableData.classList.add('h-1/2');
+        tableData.classList.remove('h-full');
+        formData.classList.add('h-1/2');
+    }
 }
 
 function toggleSelectData(){
@@ -76,6 +94,15 @@ function toggleSelectData(){
     }else{
         selectData.classList.add('w-0','h-0','scale-0');
         selectData.classList.remove('w-auto','h-full','scale-100');
+    }
+    if(!addDataBtn.classList.contains('active')&&!updateDataBtn.classList.contains('active')&&!selectData.classList.contains('active')){
+        tableData.classList.add('h-full');
+        tableData.classList.remove('h-1/2');
+        formData.classList.remove('h-1/2');
+    }else{
+        tableData.classList.add('h-1/2');
+        tableData.classList.remove('h-full');
+        formData.classList.add('h-1/2');
     }
 }
 
@@ -107,6 +134,14 @@ function hideAddData(){
 
     formData.classList.add('justify-center');
     formData.classList.remove('justify-around');
+
+    if(!addDataBtn.classList.contains('active')&&!updateDataBtn.classList.contains('active')&&!selectData.classList.contains('active')){
+        tableData.classList.add('h-full');
+        tableData.classList.remove('h-1/2');
+    }else{
+        tableData.classList.add('h-1/2');
+        tableData.classList.remove('h-full');
+    }
 }
 
 function hideUpdateData(){
@@ -116,6 +151,14 @@ function hideUpdateData(){
 
     formData.classList.add('justify-center');
     formData.classList.remove('justify-around');
+
+    if(!addDataBtn.classList.contains('active')&&!updateDataBtn.classList.contains('active')&&!selectData.classList.contains('active')){
+        tableData.classList.add('h-full');
+        tableData.classList.remove('h-1/2');
+    }else{
+        tableData.classList.add('h-1/2');
+        tableData.classList.remove('h-full');
+    }
 }
 
 addDataBtn.addEventListener('click',toggleAddData);

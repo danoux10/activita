@@ -1,21 +1,17 @@
-const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
+const radio = document.querySelectorAll("input[name='tableSelect']")
 
-const optionsList = document.querySelectorAll(".option");
+let findSelected = () => {
+    let other = document.querySelectorAll(".table-line")
+    other.forEach(other=>{
+        other.classList.remove('active');
+    })
+    let selected = document.querySelector("input[type='radio']:checked").value
+    let line = document.getElementById(selected)
+    line.classList.add('active')
+}
 
-selected.addEventListener("click", () => {
-    optionsContainer.classList.toggle("active");
-});
+radio.forEach(radio =>{
+    radio.addEventListener("change",findSelected);
+})
 
-optionsList.forEach(o => {
-    o.addEventListener("click", () => {
-        selected.innerHTML = o.querySelector("label").innerHTML;
-        optionsContainer.classList.remove("active");
-    });
-});
-
-
-const selectedSel = document.getElementById("selected-sel");
-const optionsContainerSel = document.getElementById("options-container-sel");
-
-const optionsListSel = document.querySelectorAll(".option-sel");
+findSelected();

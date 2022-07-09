@@ -63,31 +63,7 @@
                     </span>
                 </div>
                 <div class="table-body overflow-scroll w-full">
-                    <?php for ($i = 0; $i < 20; $i++) { ?>
-                        <div class="table-line"><!--flex justify-around border border-amber-500 -->
-                          <label class="element-body">
-                              <p>12/12/2022</p>
-                          </label>
-                          <label class="element-body">
-                              <p>coding</p>
-                          </label>
-                          <label class="element-body">
-                              <p>10:00</p>
-                          </label>
-                          <label class="element-body">
-                              <p>11:00</p>
-                          </label>
-                          <label class="element-body">
-                              <p>01:00</p>
-                          </label>
-                          <label class="element-body">
-                              <p>project activiter <?php echo $i; ?></p>
-                          </label>
-                          <label class="element-body">
-                              <input type="radio" name="tableSelect" id="act<?php echo $i; ?>">
-                          </label>
-                      </div>
-                    <?php } ?>
+                    <?php echo tableSelect();?>
                 </div>
             </form>
         </div>
@@ -102,11 +78,11 @@
     </section>
 
     <!--link content form and btn container for graph-->
-    <section class="w-3/6 h-full flex items-center justify-between" id="graphForm-content">
+    <section class="w-3/6 h-full flex items-center justify-between border" id="graphForm-content">
         <!--sublink form & tableToday-->
         <div class="form-container w-11/12 h-full flex flex-col items-center justify-center content-around">
             <!--anchor form content-->
-            <div class="h-1/2 w-full mt-5 flex items-center justify-center" id="form-content">
+            <div class="h-1/2 w-full mt-5 flex items-center justify-center border border-red-200" id="form-content">
                 <div class="flex">
                     <!--subanchor add form add data in models/form -->
 									<?php include_once "../models/form/add_data.php"; ?>
@@ -119,11 +95,39 @@
             </div>
 
             <!--anchor tableToday content-->
-            <div id="data-today" class="w-10/12 table-content mt-16 overflow-scroll flex">
-							<?php
-								echo tableDay();
-							?>
-            </div>
+            <form id="data-today" class="table-content mt-16 h-1/2">
+                <div class="table-title flex flex-row justify-around">
+                    <button type="submit" class="btn-update"><i class="fa-solid fa-pen-clip"></i> Update data</button>
+                    <p class="font-bold uppercase">Today</p>
+                    <button type="submit" class="btn-delete"><i class="fa-solid fa-trash-can"></i> Delete data</button>
+                </div>
+                <div class="table-head">
+                    <span class="element-title">
+                        <p>Date</p>
+                    </span>
+                    <span class="element-title">
+                        <p>Activiter</p>
+                    </span>
+                    <span class="element-title">
+                        <p>Hours Start</p>
+                    </span>
+                    <span class="element-title">
+                        <p>Hours End</p>
+                    </span>
+                    <span class="element-title">
+                        <p>Duration</p>
+                    </span>
+                    <span class="element-title">
+                        <p>Description</p>
+                    </span>
+                    <span class="element-title">
+                        <p>Select</p>
+                    </span>
+                </div>
+                <div class="table-body overflow-scroll w-full">
+			            <?php echo tableSelect(); ?>
+                </div>
+            </form>
         </div>
 
         <!--sublink btn container graphForm-->
@@ -137,13 +141,11 @@
         </div>
     </section>
 </main>
-
+<script src="script.js"></script>
 <script src="../scripts/day&night.js"></script>
 
 <script src="../scripts/pieChart.js"></script>
 <script src="../scripts/barChart.js"></script>
-
-<script src="../scripts/toggleMain.js"></script>
 
 <script src="../scripts/toggleFormData.js"></script>
 <script src="../scripts/toggleGraph.js"></script>

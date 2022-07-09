@@ -26,6 +26,9 @@ button:hover i {
   animation: shake 2s ease infinite;
 }
 
+.table-body {
+  height: 85%;
+}
 .table-body::-webkit-scrollbar {
   width: 10px;
   height: 0;
@@ -90,6 +93,32 @@ button:hover i {
   padding: 0.1% 0.5%;
   display: block;
   overflow: hidden;
+}
+
+label {
+  cursor: pointer;
+}
+
+.element-body:nth-child(7) input[type=radio] {
+  display: none;
+}
+.element-body:nth-child(7) .radio {
+  border: 2px solid #4fbdba;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+}
+.element-body:nth-child(7) input[type=radio]:checked ~ .radio {
+  background: #aefeff;
+  transition: background ease 0.5s;
+}
+
+.table-line.active {
+  background: red;
+}
+.table-line.active .element-body {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=styleBis.css.map */
