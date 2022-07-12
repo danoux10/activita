@@ -1,0 +1,57 @@
+main.w-screen
+  section.w-3/6 .h-full .flex .items-center .justify-center
+    div.w-11/12 .h-full
+      div
+        div
+          canvas
+        div
+          canvas
+      form.flex justify-center flex-col
+        div.flex .flex-row .justify-around
+          button:submit
+            i
+          p.font-bold uppercase
+          button:submit
+            i
+        div
+          (span
+            p)*7
+        div.overflow-scroll w-full
+          link tableSelect
+      div.ml-2.5
+        ul
+          li
+            i
+          li
+            i
+          li
+            i
+  section.h-1/2 .w-full .mt-5 .flex .items-center .justify-between
+    div.h-1/2 .w-full .mt-5 .flex .items-center justify-center .content-around
+      div.h-1/2 .w-full .mt-5 .flex .items-center .justify-center
+        div.flex
+          link add data
+          link modify data
+        link select data
+      form.mt-16 .h-1/2
+        div.flex .flex-row .justify-around
+          button:submit
+            i
+          p.font-bold uppercase
+          button:submit
+            i
+        div
+          (span
+            p)*7
+        div.overflow-scroll
+          link tableDay
+      div.mr-2.5
+        ul
+          li
+            i
+          li
+            i
+          li
+            i
+          li
+            i

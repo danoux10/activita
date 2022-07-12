@@ -1,0 +1,40 @@
+header
+  nav
+    ul
+      li
+        i
+      li
+        i
+      li
+        i
+      li
+        i
+      li
+        i
+      li
+        i
+
+link
+nav
+  div.flex .items-center .justify-around .absolute
+    i
+    p.w-full
+  div.flex .items-center .justify-around .absolute
+    i
+    p.w-full
+
+ nav
+   div.flex .items-center .justify-around .absolute
+     i
+     p.w-full
+   div.flex .items-center .justify-around .absolute
+     i
+     p.w-full
+
+ nav
+   div.flex .items-center .justify-around .absolute
+     i
+     p.w-full
+   div.flex .items-center .justify-around .absolute
+     i
+     p.w-full

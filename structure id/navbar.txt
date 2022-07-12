@@ -1,0 +1,38 @@
+header#navbar
+  nav
+    ul
+      li#graph-btn
+        i
+      li#card-btn
+        i
+      li#icon-btn
+        i
+      li#night
+        i
+      li#day
+        i
+
+link
+nav#buttonGraph
+  div#graphBtn
+    i
+    p
+  div#graphFormBtn
+    i
+    p
+
+ nav#buttonCard
+   div#cardBtn
+     i
+     p
+   div#cardFormBtn
+     i
+     p
+
+ nav#buttonIcon
+   div#iconBtn
+     i
+     p
+   div#iconFormBtn
+     i
+     p

@@ -1,0 +1,22 @@
+form
+  fieldset
+    legend
+      span
+        label
+        input:date
+      span
+        label
+        input:date
+      span
+        label
+        div
+          div
+            input:radio
+            label
+          link include select select
+          div
+      span
+        button:submit
+          i
+        button:submit
+          i

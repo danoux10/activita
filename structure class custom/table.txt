@@ -1,0 +1,15 @@
+link selected
+div.table-line .table-line-select
+  (label.element-body
+    p)*6
+  label.element-body
+    input:radio
+    span.radio
+
+link today
+div.table-line .table-line-day
+  (label.element-body
+    p)*6
+  label.element-body
+    input:radio
+    span.radio

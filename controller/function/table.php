@@ -1,64 +1,74 @@
 <?php
 $dataSelects ='20';
-		//link table Select Act
-    function tableSelect() {
-        global $dataSelects;
-        $tableSelect = "<table id='tableSelect'>";
-            $tableSelect .="<thead>";
-	            $tableSelect .="<tr>";
-                    $tableSelect .="<th>Date</th>";
-                    $tableSelect .="<th>Activiter</th>";
-                    $tableSelect .="<th>Heure Start</th>";
-                    $tableSelect .="<th>Heure End</th>";
-                    $tableSelect .="<th>Duration</th>";
-                    $tableSelect .="<th>Description</th>";
-                $tableSelect .="</tr>";
-            $tableSelect.="</thead>";
-            for ($i=0; $i<$dataSelects; $i++) {
-               $tableSelect .="<tbody>";
-                  $tableSelect .="<tr>";
-                      $tableSelect .="<td>12/12/2022</td>";
-                      $tableSelect .="<td>Coding</td>";
-                      $tableSelect .="<td>10:00</td>";
-                      $tableSelect .="<td>11:00</td>";
-                      $tableSelect .="<td>01:00</td>";
-                      $tableSelect .="<td>projet activiter $i</td>";
-                  $tableSelect .="</tr>";
-               $tableSelect .="</tbody>";
-            }
-        $tableSelect.="</table>";
-        return $tableSelect;
-    };
-		
-		//link table today
-		function tableDay(){
-			global $dataSelects;
-			$tableDay = "<table id='tableSelect' class='w-full'>";
-			$tableDay .="<thead>";
-			$tableDay .="<tr>";
-			$tableDay .="<th>Date</th>";
-			$tableDay .="<th>Activiter</th>";
-			$tableDay .="<th>Heure Start</th>";
-			$tableDay .="<th>Heure End</th>";
-			$tableDay .="<th>Duration</th>";
-			$tableDay .="<th>Description</th>";
-			$tableDay .="<th>Select</th>";
-			$tableDay .="</tr>";
-			$tableDay.="</thead>";
-			for ($i=0; $i<$dataSelects; $i++) {
-				$tableDay .="<tbody>";
-				$tableDay .="<tr>";
-				$tableDay .="<td>12/12/2022</td>";
-				$tableDay .="<td>Coding</td>";
-				$tableDay .="<td>10:00</td>";
-				$tableDay .="<td>11:00</td>";
-				$tableDay.="<td>01:00</td>";
-				$tableDay .="<td>projet activiter $i</td>";
-				$tableDay .="<td><input type='radio' name='selectTab' id='$i'></td>";
-				$tableDay .="</tr>";
-				$tableDay .="</tbody>";
-			}
-			$tableDay.="</table>";
-			return $tableDay;
-		}
-?>
+
+function tableSelect(){
+	global $dataSelects;
+	for ($i = 0; $i < $dataSelects; $i++){?>
+		<div class="table-line table-line-select" id="tableSelect<?php echo $i ?>">
+			<label for="act<?php echo $i ?>" class="element-body">
+				<p>12/12/2022</p>
+			</label>
+			
+			<label for="act<?php echo $i ?>" class="element-body">
+				<p>coding</p>
+			</label>
+			
+			<label for="act<?php echo $i ?>" class="element-body">
+				<p>10:00</p>
+			</label>
+			
+			<label for="act<?php echo $i ?>" class="element-body">
+				<p>11:00</p>
+			</label>
+			
+			<label for="act<?php echo $i ?>" class="element-body">
+				<p>01:00</p>
+			</label>
+			
+			<label for="act<?php echo $i ?>" class="element-body">
+				<p>activiter <?php echo $i ?></p>
+			</label>
+			
+			<label for="act<?php echo $i ?>" class="element-body">
+				<input type="radio" name="tableSelect" class="radio-select-data" value="<?php echo $i ?>" id="act<?php echo $i ?>">
+				<span class="radio"></span>
+			</label>
+		</div>
+	<?php }
+}
+
+function tableDay(){
+	global $dataSelects;
+	for ($i = 0; $i < $dataSelects; $i++){?>
+		<div class="table-line table-line-day" id="tableDay<?php echo $i ?>">
+			<label for="ac<?php echo $i ?>" class="element-body">
+				<p>12/12/2022</p>
+			</label>
+			
+			<label for="ac<?php echo $i ?>" class="element-body">
+				<p>coding</p>
+			</label>
+			
+			<label for="ac<?php echo $i ?>" class="element-body">
+				<p>10:00</p>
+			</label>
+			
+			<label for="ac<?php echo $i ?>" class="element-body">
+				<p>11:00</p>
+			</label>
+			
+			<label for="ac<?php echo $i ?>" class="element-body">
+				<p>01:00</p>
+			</label>
+			
+			<label for="ac<?php echo $i ?>" class="element-body">
+				<p>activiter <?php echo $i ?></p>
+			</label>
+			
+			<label for="ac<?php echo $i ?>" class="element-body">
+				<input type="radio" name="tableDay" class="radio-day-data" value="<?php echo $i ?>" id="ac<?php echo $i ?>">
+				<span class="radio"></span>
+			</label>
+		</div>
+	<?php }
+}

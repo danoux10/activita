@@ -1,0 +1,19 @@
+link selected
+div#tableSelect+value
+  (label
+    p)*6
+  label
+    input:radio#act+value
+    span
+
+link today
+div#tableDay+value
+  (label
+    p)*6
+  label
+    input:radio#ac+value
+    span
+
+value = variable php id activiter
+
+act & ac peuvent changer de nom

@@ -1,0 +1,57 @@
+main
+  section
+    div.graph-container
+      div
+        div
+          canvas
+        div
+          canvas
+      form.table-content
+        div.table-title
+          button:submit.btn-update
+            i
+          p
+          button:submit.btn-delete
+            i
+        div.table-head
+          (span.element-title
+            p)*7
+        div.table-body
+          link tableSelect
+      div.btn-container
+        ul
+          li
+            i
+          li
+            i
+          li
+            i
+  section
+    div.form-container
+      div
+        div
+          link add data
+          link modify data
+        link select data
+      form.table-content
+        div.table-title
+          button:submit.btn-update
+            i
+          p
+          button:submit.btn-delete
+            i
+        div.table-head
+          (span.element-title
+            p)*7
+        div.table-body
+          link tableDay
+      div.btn-container
+        ul
+          li
+            i
+          li
+            i
+          li
+            i
+          li
+            i

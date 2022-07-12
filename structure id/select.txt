@@ -1,0 +1,14 @@
+link add
+div
+  input:radio#act+value
+  label
+
+link modify
+div
+  input:radio#act+value
+  label
+
+link select
+div
+  input:radio#act+value
+  label

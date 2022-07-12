@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../dist/tailwind.css">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
-    <link rel="stylesheet" href="styleBis.css">
+<!--    <link rel="stylesheet" href="styleBis.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<?php require '../controller/function/table.php'; ?>
@@ -78,11 +78,11 @@
     </section>
 
     <!--link content form and btn container for graph-->
-    <section class="w-3/6 h-full flex items-center justify-between border" id="graphForm-content">
+    <section class="w-3/6 h-full flex items-center justify-between" id="graphForm-content">
         <!--sublink form & tableToday-->
         <div class="form-container w-11/12 h-full flex flex-col items-center justify-center content-around">
             <!--anchor form content-->
-            <div class="h-1/2 w-full mt-5 flex items-center justify-center border border-red-200" id="form-content">
+            <div class="h-1/2 w-full mt-5 flex items-center justify-center" id="form-content">
                 <div class="flex">
                     <!--subanchor add form add data in models/form -->
 									<?php include_once "../models/form/add_data.php"; ?>
@@ -91,7 +91,7 @@
 									<?php include_once "../models/form/modify_data.php"; ?>
                 </div>
                 <!--subanchor add form select data in models/form -->
-							<?php include_once "../models/form/select-data.php"; ?>
+							<?php include_once "../models/form/select_data.php"; ?>
             </div>
 
             <!--anchor tableToday content-->
@@ -124,8 +124,8 @@
                         <p>Select</p>
                     </span>
                 </div>
-                <div class="table-body overflow-scroll w-full">
-			            <?php echo tableSelect(); ?>
+                <div class="table-body overflow-scroll">
+			            <?php echo tableDay(); ?>
                 </div>
             </form>
         </div>

@@ -1,8 +1,10 @@
 body {
   transition: all ease .5s;
+  background: $deep-blue; //move dark mode
+  color: $light; //move dark mode
 }
 
-//link general navbar
+//link navbar general
 #navbar {
   margin: .5% 0;
 
@@ -14,352 +16,435 @@ body {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      font-size: large; //move responsive
       border-bottom: 2px solid;
-      width: 50%; //move responsive
       border-radius: 50px;
+      width: 50%; //move responsive
+      font-size: large; //move responsive
+      border-color: $dark-blue; //move dark mode
 
       li {
         cursor: pointer;
         transition: visibility ease .5s;
+
+        &:hover, &.active {
+          color: $medium-blue; //move dark mode
+        }
       }
     }
   }
 }
 
-//link button graph
-nav.nav-button{
-  position:absolute;
-  top: 1%;
-  width:100%;
-  div{
+//link nav-button
+nav.nav-button {
+  position: absolute;
+  width: 100%;
+  top: 1%; //move responsive
+
+  div {
     cursor: pointer;
     border-radius: 10px;
-    padding:0 5px;
-    width:6%;
-    transition: width,background ease .5s;
-    border: 1px solid $medium-blue;
-    p{
+    padding: 0 5px;
+    transition: width, background ease .5s;
+    border: 1px solid;
+    width: 6%; //move responsive
+    border-color: $medium-blue; //move dark mode
+
+    p {
       text-align: center;
       transition: all ease .5s;
     }
-    i{
+
+    i {
       transition: all ease .5s;
     }
+
     //sublink hover
-    &:hover{
-      background: $medium-blue;
-      color:black;
-      transition:background ease .5s;
-      i{
-        transform:rotate(180deg);
+    &:hover {
+      background: $medium-blue; //move dark mode
+      color: $dark; //move dark mode
+      transition: background ease .5s;
+
+      i {
+        transform: rotate(180deg);
       }
     }
-    //sublink active mode
-    &.active{
-      border-radius:50px;
-      height:30px;
-      width:30px;
+
+    //sublink active
+    &.active {
+      border-radius: 50px;
       justify-content: center;
-      background: $dark-blue;
-      p{
-        width:0;
+      height: 30px; //move responsive
+      width: 30px; //move responsive
+      background: $dark-blue; //move darkmode
+      p {
+        width: 0;
         overflow: hidden;
       }
-      i{
-        transform:rotate(180deg);
+
+      i {
+        transform: rotate(180deg);
       }
+
       //anchor active hover
-      &:hover{
-        background: $medium-blue;
-        i{
-          transform:rotate(360deg);
+      &:hover {
+        background: $medium-blue; //move darkmode
+        i {
+          transform: rotate(360deg);
         }
       }
     }
   }
-  //sublink btn left position
-  div:nth-child(1){
-    left:10%;
-  }
-  //sublink btn right position
-  div:nth-child(2){
-    flex-direction: row-reverse;
-    right: 10%;
+
+  div {
+    //sublink btn left
+    &:nth-child(1) {
+      left: 10%;
+    }
+
+    //sublink btn right
+    &:nth-child(2) {
+      right: 10%;
+      flex-direction: row-reverse;
+    }
   }
 }
 
 //link main
-main {
+main{
   display: flex;
   padding: 0 .2%;
-  height: 93vh; //move responsive
   position: relative;
   transition: all ease .5s;
+  height: 93vh;//move responsive
   //sublink section
-  section {
+  section{
     margin: 0 .5%;
-  }
-  //sublink btn container
-  .btn-container {
-    ul {
-      display: flex;
-      flex-direction: column;
+    //anchor btn container
+    .btn-container{
+      ul{
+        display: flex;
+        flex-direction: column;
 
-      li {
+        li{
+          text-align: center;
+          cursor: pointer;
+          border: 1px solid;
+          border-radius: 50px;
+          width: 2.5rem;//move responsive
+          height: 2.5rem;//move responsive
+          font-size: x-large;//move responsive
+          border-color: $light;//move dark mode
+
+          &:nth-child(2n){
+            margin:1.25rem 0;//move responsive
+          }
+          //subanchor active
+          &.active{
+            transition: all ease .5s;
+            background: $dark-blue;//move dark mode
+            border-color:$light-blue;//move dark mode
+          }
+          //subanchor hover
+          &:hover{
+            border: 2px solid;
+            transition: background, color ease .5s;
+            color:$light-blue;//move dark mode
+            background: $dark;//move dark mode
+          }
+        }
+      }
+    }
+    //anchor button
+    form {
+      button {
         border: 1px solid;
         border-radius: 50px;
-        text-align: center;
-        font-size: x-large;
-        cursor: pointer;
-        width: 2.5rem;
-        height: 2.5rem;
+        padding: .5% 1%;
+        //subanchor valid btn
+        &.btn-valid {
+          border-color: #00ff00;
+          background: #008800;
+        }
 
-        &:nth-child(2n) {
-          margin: 1.25rem 0;
+        //subanchor cancel & delete btn
+        &.btn-cancel, &.btn-delete {
+          border-color: #ff0000;
+          background: #880000;
         }
-        //anchor active mode
-        &.active {
-          background: $dark-blue;
-          border-color: $light-blue;
-          transition: background ease .5s;
+
+        //subanchor update btn
+        &.btn-update {
+          border-color: #ffff00;
+          background: #888800;
         }
-        //anchor hover mode
-        &:hover {
-          color: $light-blue;
-          border: 2px solid;
-          background: $dark;
-          transition: background, color ease .5s;
+
+        //subanchor download btn
+        &.btn-download {
+          border-color: #008800;
+          background: #009e08;
+        }
+
+        //subanchor animate shake
+        &:hover:not(.btn-download) {
+          animation: sphere 3s ease infinite;
+
+          i {
+            animation: shake 2s ease infinite;
+          }
+        }
+
+        //subanchor animate down
+        &.btn-download {
+          overflow: hidden;
+
+          &:hover {
+            i {
+              animation: download 5s ease infinite;
+            }
+          }
         }
       }
     }
   }
 }
-//sublink graph
-main#Graph {
-  //anchor graph>section
-  section {
+
+//link main graph
+main#Graph{
+  //sublink all section
+  section{
     transition: all ease .5s;
-    //subanchor table
-    table {
-      th, td, tr {
-        border: 1px solid;
-        text-align: center;
+    //anchor table custom
+    .table-content{
+      //subanchor table head
+      .table-head{
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-top-right-radius: 10px;
+        padding-right: 10px;//move responsive
+        margin-top: 1%;//move responsive
       }
-    }
-    //subanchor table content
-    div.table-content {
-      transition: all ease .5s;
+      //subanchor table head & line
+      .table-head, .table-line {
+        display: flex;
+        justify-content: space-between;
 
-      &::-webkit-scrollbar {
-        height: 0;
-        width: 5px;
-        border: 1px solid;
-        border-radius: 100px;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        width: 5px;
-        border-radius: 100px;
-        background: white;
-      }
-    }
-  }
-
-  //anchor graph content
-  section#graph-content {
-    div.graph-container {
-      #graphique {
-        transition: all ease .5s;
-      }
-    }
-  }
-
-  //anchor graphForm content
-  section#graphForm-content {
-    div.form-container {
-      //subanchor form
-      form {
-        transition: all ease .5s;
-
-        fieldset {
-          border-top: 2px solid;
-          border-bottom: 2px solid;
-          transition: all ease .5s;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+        .element-title, .element-body {
           text-align: center;
-          height: 100%;
-          border-radius: 20px;
-          //link select
-          .select {
-            width: 48%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-right: 1px solid;
+          border-left: 1px solid;
+          //date, heure début, heure fin, durée
+          &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+            width: 100px;//move responsive
+          }
+          //activité, description
+          &:nth-child(2), &:nth-child(6) {
+            width: 150px;//move responsive
+          }
+          //select
+          &:nth-child(7) {
+            width: 50px;//move responsive
+          }
+        }
+      }
+      //subanchor table body
+      .table-body {
+        height: 85%;//move responsive
+        &::-webkit-scrollbar {
+          height: 0;
+          border: 1px solid;
+          border-radius: 50px;
+          width: 10px;//move responsive
+        }
+        &::-webkit-scrollbar-thumb {
+          width: 100%;
+          border-radius: 50px;
+          background: white;//Update color move dark mode
+        }
+        .table-line {
+          border-bottom: 1px solid;
+          margin: .5% 0;//move responsive
+          max-height: 4rem;//move responsive
+          //date
+          &:nth-child(1) {
+            border: 1px solid;
+          }
+          //subanchor active
+          &.active {
+            .element-body {
+              background: rgba(0, 0, 0, .5);
+              background: red;//Update color move dark mode
+            }
+          }
 
-            .select-box {
-              text-align: left;
-              display: flex;
-              flex-direction: column;
-              position: relative;
+          .element-body {
+            &:nth-child(6) {
+              padding: .1% .5%;
+              display: block;
+              overflow: hidden;
               cursor: pointer;
-              width: 100%;
-              //sublink option-containt select
-              .options-container {
-                width: 100%;
-                order: 1;
-                overflow: scroll;
-                height: 20vh;
-                background: gray;
-                position: absolute;
-                top: 3vh;
-                z-index: 1;
-                opacity: 0;
-                max-height: 0;
-                border: 1px solid red;
-                border-top: 0;
-                border-bottom-left-radius: 10px;
-                border-bottom-right-radius: 10px;
-                //anchor select activer mode
-                &.active {
-                  opacity: 1;
-                  max-height: 100px;
-                  transition: all ease .5s;
+            }
 
-                  + {
-                    .selected:after {
-                      transform: rotateX(180deg);
+            &:nth-child(7) {
+              border-right: none;
+
+              input[type="radio"] {
+                display: none;
+              }
+
+              .radio {
+                border: 2px solid $medium-blue;
+                display: block;
+                width: 15px;
+                height: 15px;
+                border-radius: 50px;
+              }
+
+              input[type="radio"]:checked ~ .radio {
+                background: $light-blue;
+                transition: background ease .5s;
+              }
+            }
+          }
+        }
+      }
+    }
+    //anchor graph-content
+    &#graph-content{
+      div.graph-container{
+        #graphique{
+          transition: all ease .5s;
+        }
+      }
+    }
+    //anchor graphForm-content
+    &#graphForm-content{
+      div.form-container{
+        form{
+          transition:all ease .5s;
+          fieldset{
+            border-top: 2px solid;
+            border-bottom:2px solid;
+            transition: all ease .5s;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            text-align: center;
+            border-radius: 20px;
+            height:100%;
+            //subanchor select
+            .select {
+              width: 48%;
+              .select-box {
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                cursor: pointer;
+                width: 100%;
+                .options-container {
+                  width: 100%;
+                  order: 1;
+                  overflow: scroll;
+                  height: 20vh;
+                  background: gray;
+                  position: absolute;
+                  top: 3vh;
+                  z-index: 1;
+                  opacity: 0;
+                  max-height: 0;
+                  border: 1px solid red;
+                  border-top: 0;
+                  border-bottom-left-radius: 10px;
+                  border-bottom-right-radius: 10px;
+                  //anchor select activer mode
+                  &.active {
+                    opacity: 1;
+                    max-height: 100px;
+                    transition: all ease .5s;
+                    + {
+                      .selected:after {
+                        transform: rotateX(180deg);
+                      }
+                    }
+                  }
+                  &::-webkit-scrollbar {
+                    width: 10px;
+                    height: 0;
+                    background: black;
+                  }
+                  &::-webkit-scrollbar-thumb {
+                    background: crimson;
+                    width: 100%;
+                    border-radius: 50px;
+                  }
+                  .option {
+                    cursor: pointer;
+                    padding: 1%;
+                    input[type='radio'] {
+                      display: none;
                     }
                   }
                 }
-
-                &::-webkit-scrollbar {
-                  width: 10px;
-                  height: 0;
-                  background: black;
-                }
-
-                &::-webkit-scrollbar-thumb {
-                  background: crimson;
-                  width: 100%;
-                  border-radius: 50px;
-                }
-
-                .option {
+                //anchor select selected
+                .selected {
+                  border: 1px solid;
+                  position: relative;
+                  order: 0;
                   cursor: pointer;
-                  padding: 1%;
+                  border-radius: 10px;
+                  padding: 2%;
+                  display: flex;
+                  justify-content: space-between;
 
-                  input[type='radio'] {
-                    display: none;
+                  &::after {
+                    text-align: center;
+                    content: "▼";
+                    height: 100%;
                   }
-                }
-              }
-              //anchor select selected
-              .selected {
-                border: 1px solid;
-                position: relative;
-                order: 0;
-                cursor: pointer;
-                border-radius: 10px;
-                padding: 2%;
-                display: flex;
-                justify-content: space-between;
 
-                &::after {
-                  text-align: center;
-                  content: "▼";
-                  height: 100%;
-                }
-
-              }
-            }
-          }
-
-          //sublink input select textarea
-          input, select, textarea {
-            color: $light;
-            border: 1px solid $dark-blue;
-            background: none;
-          }
-
-          //sublink input date & time
-          input[type="date"], input[type="time"], select {
-            text-align: center;
-
-            &::-webkit-calendar-picker-indicator {
-              filter: invert(1);
-            }
-          }
-
-          //sublink legend
-          legend {
-            border-right: 2px solid;
-            border-left: 2px solid;
-            padding: 0 2%;
-            border-radius: 50px;
-          }
-
-          //sublink dataSelect
-          #dataSelect fieldset {
-            display: flex;
-            align-content: space-around;
-            flex-direction: column;
-            justify-content: space-around;
-          }
-
-          //sublink button
-          button {
-            border: 1px solid;
-            border-radius: 50px;
-            padding: .5% 1%;
-            //anchor valid btn
-            &.btn-valid{
-              border-color: #00ff00;
-              background: #008800;
-            }
-            //anchor cancel & delete
-            &.btn-cancel, &.btn-delete{
-              border-color:#ff0000;
-              background: #880000;
-            }
-            //anchor update btn
-            &.btn-update{
-              border-color:#ffff00;
-              background: #888800;
-            }
-            //anchor download btn
-            &.btn-download{
-              border-color: #008800;
-              background: #009e08;
-            }
-            //anchor hover mode
-            &:hover {
-              animation: sphere 3s ease infinite;
-
-              i {
-                animation: shake 2s ease infinite;
-              }
-            }
-
-            &.download-btn {
-              overflow: hidden;
-              &:hover {
-                i {
-                  animation: download 5s ease infinite;
                 }
               }
             }
+            //subanchor input, textarea
+            input,textarea{
+              background: none;
+              border: 1px solid;
+              color:$light;//move dark mode
+              border-color:$dark-blue;//move dark mode
+            }
+            //subanchor input date & time
+            input[type="date"], input[type="time"], select {
+              text-align: center;
+
+              &::-webkit-calendar-picker-indicator {
+                filter: invert(1);
+              }
+            }
+            //subanchor legend
+            legend {
+              border-right: 2px solid;
+              border-left: 2px solid;
+              padding: 0 2%;
+              border-radius: 50px;
+            }
           }
-        }
-        &#data-select{
-          .select{
-            width: 70%;
+          &#data-select{
+            fieldset{
+              display:flex;
+              flex-direction:column;
+              align-content: space-around;
+              justify-content:space-around;
+              .select{
+                width:70%;
+              }
+            }
           }
         }
       }
     }
   }
 }
-
-
-

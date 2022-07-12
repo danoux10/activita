@@ -1,0 +1,29 @@
+form
+  fieldset
+    legend
+    span
+      label
+      input:date
+    span.select
+      label
+      div.select-box
+        //link select add
+      div.selected
+    div
+      span
+        label
+        input:time
+      span
+        label
+        label:time
+    span
+      label
+      input:time
+    span
+      label
+      textarea
+    span
+      button:submit.btn-valid
+        i
+      button:submit.btn-cancel
+        i

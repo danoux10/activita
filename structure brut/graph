@@ -1,0 +1,57 @@
+main
+  section
+    div
+      div
+        div
+          canvas
+        div
+          canvas
+      form
+        div
+          button:submit
+            i
+          p
+          button:submit
+            i
+        div
+          (span
+            p)*7
+        div
+          link tableSelect
+      div
+        ul
+          li
+            i
+          li
+            i
+          li
+            i
+  section
+    div
+      div
+        div
+          link add data
+          link modify data
+        link select data
+      form
+        div
+          button:submit
+            i
+          p
+          button:submit
+            i
+        div
+          (span
+            p)*7
+        div
+          link tableDay
+      div
+        ul
+          li
+            i
+          li
+            i
+          li
+            i
+          li
+            i

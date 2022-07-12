@@ -1,0 +1,57 @@
+main#Graph
+  section#graph-content
+    div
+      div#graphique
+        div#bar-content
+          canvas#bar
+        div#pie-content
+          canvas#pie
+      form#tableSelect-content
+        div
+          button:submit
+            i
+          p
+          button:submit
+            i
+        div
+          (span
+            p)*7
+        div
+          link tableSelect
+      div
+        ul
+          li#bar-btn
+            i
+          li#pie-btn
+            i
+          li#table-btn
+            i
+  section#graphForm-content
+    div
+      div#form-content
+        div
+          link add data
+          link modify data
+        link select data
+      form#data-today
+        div
+          button:submit
+            i
+          p
+          button:submit
+            i
+        div
+          (span
+            p)*7
+        div
+          link tableDay
+      div
+        ul
+          li#add-data-btn
+            i
+          li#update-data-btn
+            i
+          li#select-data-btn
+            i
+          li#table-today-btn
+            i

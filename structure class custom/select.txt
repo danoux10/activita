@@ -1,0 +1,14 @@
+link add
+div.option .option-add
+  input:radio
+  label
+
+link modify
+div.option .option-update
+  input:radio
+  label
+
+link select
+div.option .option-sel
+  input:radio
+  label

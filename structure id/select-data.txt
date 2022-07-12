@@ -1,0 +1,22 @@
+form#data-select
+  fieldset
+    legend
+      span
+        label
+        input:date
+      span
+        label
+        input:date
+      span
+        label
+        div
+          div#option-container-sel
+            input:radio#act
+            label
+          link include select select
+          div#selected-sel
+      span
+        button:submit
+          i
+        button:submit
+          i

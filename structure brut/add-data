@@ -1,0 +1,30 @@
+form
+  fieldset
+    legend
+    span
+      label
+       input:date
+    span
+      label
+      div
+        div
+          link select add
+        div
+    div
+      span
+        label
+        input:time
+      span
+        label
+        input:time
+    span
+      label
+      input:time
+    span
+      label
+      textarea
+    span
+      button:submit
+        i
+      button:reset
+        i

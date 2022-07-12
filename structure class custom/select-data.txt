@@ -1,0 +1,22 @@
+form
+  fieldset
+    legend
+      span
+        label
+        input:date
+      span
+        label
+        input:date
+      span.select
+        label
+        div.select-box
+          div.option-container
+            input:radio.option .option-sel
+            label
+          link include select select
+          div.selected
+      span
+        button:submit.btn-valid
+          i
+        button:submit.btn-download
+          i

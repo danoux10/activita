@@ -1,0 +1,29 @@
+form#data-add
+  fieldset
+    legend
+    span
+      label
+      input:date
+    span
+      label
+      div#option-container-add
+        //link select add
+      div#selected-add
+    div
+      span
+        label
+        input:time
+      span
+        label
+        label:time
+    span
+      label
+      input:time
+    span
+      label
+      textarea
+    span
+      button:submit
+        i
+      button:submit
+        i

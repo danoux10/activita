@@ -7,7 +7,6 @@ const pieContent = document.getElementById('pie-content');
 const pie = document.getElementById('pie');
 
 const tableContent = document.getElementById('tableSelect-content');
-const table = document.getElementById('tableSelect');
 
 const btnBar = document.getElementById('bar-btn');
 const btnPie = document.getElementById('pie-btn');
@@ -26,7 +25,6 @@ barContent.classList.add('w-1/2','h-full', 'scale-100','flex','items-center');
 bar.classList.add('w-full','h-full');
 
 tableContent.classList.add('w-full', 'h-1/2', 'scale-100');
-table.classList.add('w-full', 'h-full','scale-100');
 
 //link pie
 function togglePie() {
@@ -38,7 +36,6 @@ function togglePie() {
     barContent.classList.remove('w-0', 'w-1/2', 'w-full', 'h-0', 'h-1/2', 'h-full', 'scale-0', 'scale-100');
     pie.classList.remove('w-full','h-full');
     tableContent.classList.remove('w-0', 'w-1/2', 'w-full', 'h-0', 'h-1/2', 'h-full', 'scale-0', 'scale-100');
-    table.classList.remove('w-0', 'w-1/2', 'w-full', 'h-0', 'h-1/2', 'h-full', 'scale-0', 'scale-100');
     //sublink (!pie active && bar active && table active)
     if (!btnPie.classList.contains('active') && btnBar.classList.contains('active') && btnTable.classList.contains('active')) {
         graphContent.classList.add('w-full', 'h-1/2', 'scale-100','flex-row');
@@ -50,7 +47,6 @@ function togglePie() {
         bar.classList.add('w-full','h-full');
 
         tableContent.classList.add('w-full', 'h-1/2', 'scale-100');
-        table.classList.add('w-full', 'h-full', 'scale-100');
     }
     //sublink (!pie active && !bar active && table active)
     if (!btnPie.classList.contains('active') && !btnBar.classList.contains('active') && btnTable.classList.contains('active')) {
@@ -63,7 +59,6 @@ function togglePie() {
         bar.classList.add('w-0','h-0');
 
         tableContent.classList.add('w-full', 'h-full', 'scale-100');
-        table.classList.add('w-full', 'h-full', 'scale-100');
     }
     //sublink (!pie active && bar active && !table active)
     if (!btnPie.classList.contains('active') && btnBar.classList.contains('active') && !btnTable.classList.contains('active')) {
@@ -76,7 +71,6 @@ function togglePie() {
         pie.classList.add('w-full','h-full');
 
         tableContent.classList.add('w-0', 'h-0', 'scale-0');
-        table.classList.add('w-0', 'h-0', 'scale-0');
     }
     //sublink (pie active && bar active && table active)
     if (btnPie.classList.contains('active') && btnBar.classList.contains('active') && btnTable.classList.contains('active')) {
@@ -89,7 +83,6 @@ function togglePie() {
         bar.classList.add('w-full','h-full');
 
         tableContent.classList.add('w-full', 'h-1/2', 'scale-100');
-        table.classList.add('w-full', 'h-full', 'scale-100');
     }
     //sublink (pie active && !bar active && table active)
     if (btnPie.classList.contains('active') && !btnBar.classList.contains('active') && btnTable.classList.contains('active')) {
@@ -102,7 +95,6 @@ function togglePie() {
         bar.classList.add('w-0','h-0');
 
         tableContent.classList.add('w-full', 'h-1/2', 'scale-100');
-        table.classList.add('w-full', 'h-full', 'scale-100');
     }
     //sublink (pie active && bar active && !table active)
     if (btnPie.classList.contains('active') && btnBar.classList.contains('active') && !btnTable.classList.contains('active')) {
@@ -115,7 +107,6 @@ function togglePie() {
         bar.classList.add('w-full','h-full');
 
         tableContent.classList.add('w-0', 'h-0', 'scale-0');
-        table.classList.add('w-0', 'h-0', 'scale-0');
     }
     //sublink (pie active && !bar active && !table active)
     if (btnPie.classList.contains('active') && !btnBar.classList.contains('active') && !btnTable.classList.contains('active')) {
@@ -128,7 +119,6 @@ function togglePie() {
         pie.classList.add('w-0','h-0');
 
         tableContent.classList.add('w-0', 'h-0', 'scale-0');
-        table.classList.add('w-0', 'h-0', 'scale-0');
     }
 }
 
@@ -142,7 +132,6 @@ function toggleBar() {
     barContent.classList.remove('w-0', 'w-1/2', 'w-full', 'h-0', 'h-1/2', 'h-full', 'scale-0', 'scale-100');
     pie.classList.remove('w-full','h-full');
     tableContent.classList.remove('w-0', 'w-1/2', 'w-full', 'h-0', 'h-1/2', 'h-full', 'scale-0', 'scale-100');
-    table.classList.remove('w-0', 'w-1/2', 'w-full', 'h-0', 'h-1/2', 'h-full', 'scale-0', 'scale-100');
     //sublink (!pie active && bar active && table active)
     if (!btnPie.classList.contains('active') && btnBar.classList.contains('active') && btnTable.classList.contains('active')) {
         graphContent.classList.add('w-full', 'h-1/2', 'scale-100','flex-row');
@@ -154,7 +143,6 @@ function toggleBar() {
         bar.classList.add('w-full','h-full');
 
         tableContent.classList.add('w-full', 'h-1/2', 'scale-100');
-        table.classList.add('w-full', 'h-full', 'scale-100');
     }
     //sublink (!pie active && !bar active && table active)
     if (!btnPie.classList.contains('active') && !btnBar.classList.contains('active') && btnTable.classList.contains('active')) {
@@ -167,7 +155,6 @@ function toggleBar() {
         bar.classList.add('w-0','h-0');
 
         tableContent.classList.add('w-full', 'h-full', 'scale-100');
-        table.classList.add('w-full', 'h-full', 'scale-100');
     }
     //sublink (!pie active && bar active && !table active)
     if (!btnPie.classList.contains('active') && btnBar.classList.contains('active') && !btnTable.classList.contains('active')) {
@@ -180,7 +167,6 @@ function toggleBar() {
         pie.classList.add('w-full','h-full');
 
         tableContent.classList.add('w-0', 'h-0', 'scale-0');
-        table.classList.add('w-0', 'h-0', 'scale-0');
     }
     //sublink (pie active && bar active && table active)
     if (btnPie.classList.contains('active') && btnBar.classList.contains('active') && btnTable.classList.contains('active')) {
@@ -193,7 +179,6 @@ function toggleBar() {
         bar.classList.add('w-full','h-full');
 
         tableContent.classList.add('w-full', 'h-1/2', 'scale-100');
-        table.classList.add('w-full', 'h-full', 'scale-100');
     }
     //sublink (pie active && !bar active && table active)
     if (btnPie.classList.contains('active') && !btnBar.classList.contains('active') && btnTable.classList.contains('active')) {
@@ -206,7 +191,6 @@ function toggleBar() {
         bar.classList.add('w-0','h-0');
 
         tableContent.classList.add('w-full', 'h-1/2', 'scale-100');
-        table.classList.add('w-full', 'h-full', 'scale-100');
     }
     //sublink (pie active && bar active && !table active)
     if (btnPie.classList.contains('active') && btnBar.classList.contains('active') && !btnTable.classList.contains('active')) {
@@ -219,7 +203,6 @@ function toggleBar() {
         bar.classList.add('w-full','h-full');
 
         tableContent.classList.add('w-0', 'h-0', 'scale-0');
-        table.classList.add('w-0', 'h-0', 'scale-0');
     }
     //sublink (pie active && !bar active && !table active)
     if (btnPie.classList.contains('active') && !btnBar.classList.contains('active') && !btnTable.classList.contains('active')) {
@@ -232,7 +215,6 @@ function toggleBar() {
         pie.classList.add('w-0','h-0');
 
         tableContent.classList.add('w-0', 'h-0', 'scale-0');
-        table.classList.add('w-0', 'h-0', 'scale-0');
     }
 }
 
@@ -246,7 +228,6 @@ function toggleTable() {
     barContent.classList.remove('w-0', 'w-1/2', 'w-full', 'h-0', 'h-1/2', 'h-full', 'scale-0', 'scale-100');
     pie.classList.remove('w-full','h-full');
     tableContent.classList.remove('w-0', 'w-1/2', 'w-full', 'h-0', 'h-1/2', 'h-full', 'scale-0', 'scale-100');
-    table.classList.remove('w-0', 'w-1/2', 'w-full', 'h-0', 'h-1/2', 'h-full', 'scale-0', 'scale-100');
     //sublink (!pie active && bar active && table active)
     if (!btnPie.classList.contains('active') && btnBar.classList.contains('active') && btnTable.classList.contains('active')) {
         graphContent.classList.add('w-full', 'h-1/2', 'scale-100','flex-row');
@@ -258,7 +239,6 @@ function toggleTable() {
         bar.classList.add('w-full','h-full');
 
         tableContent.classList.add('w-full', 'h-1/2', 'scale-100');
-        table.classList.add('w-full', 'h-full', 'scale-100');
     }
     //sublink (!pie active && !bar active && table active)
     if (!btnPie.classList.contains('active') && !btnBar.classList.contains('active') && btnTable.classList.contains('active')) {
@@ -271,7 +251,6 @@ function toggleTable() {
         bar.classList.add('w-0','h-0');
 
         tableContent.classList.add('w-full', 'h-full', 'scale-100');
-        table.classList.add('w-full', 'h-full', 'scale-100');
     }
     //sublink (!pie active && bar active && !table active)
     if (!btnPie.classList.contains('active') && btnBar.classList.contains('active') && !btnTable.classList.contains('active')) {
@@ -284,7 +263,6 @@ function toggleTable() {
         pie.classList.add('w-full','h-full');
 
         tableContent.classList.add('w-0', 'h-0', 'scale-0');
-        table.classList.add('w-0', 'h-0', 'scale-0');
     }
     //sublink (pie active && bar active && table active)
     if (btnPie.classList.contains('active') && btnBar.classList.contains('active') && btnTable.classList.contains('active')) {
@@ -297,7 +275,6 @@ function toggleTable() {
         bar.classList.add('w-full','h-full');
 
         tableContent.classList.add('w-full', 'h-1/2', 'scale-100');
-        table.classList.add('w-full', 'h-full', 'scale-100');
     }
     //sublink (pie active && !bar active && table active)
     if (btnPie.classList.contains('active') && !btnBar.classList.contains('active') && btnTable.classList.contains('active')) {
@@ -310,7 +287,6 @@ function toggleTable() {
         bar.classList.add('w-0','h-0');
 
         tableContent.classList.add('w-full', 'h-1/2', 'scale-100');
-        table.classList.add('w-full', 'h-full', 'scale-100');
     }
     //sublink (pie active && bar active && !table active)
     if (btnPie.classList.contains('active') && btnBar.classList.contains('active') && !btnTable.classList.contains('active')) {
@@ -323,7 +299,6 @@ function toggleTable() {
         bar.classList.add('w-full','h-full');
 
         tableContent.classList.add('w-0', 'h-0', 'scale-0');
-        table.classList.add('w-0', 'h-0', 'scale-0');
     }
     //sublink (pie active && !bar active && !table active)
     if (btnPie.classList.contains('active') && !btnBar.classList.contains('active') && !btnTable.classList.contains('active')) {
@@ -336,7 +311,6 @@ function toggleTable() {
         pie.classList.add('w-0','h-0');
 
         tableContent.classList.add('w-0', 'h-0', 'scale-0');
-        table.classList.add('w-0', 'h-0', 'scale-0');
     }
 }
 

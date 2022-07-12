@@ -1,17 +1,34 @@
-const radio = document.querySelectorAll("input[name='tableSelect']")
+const radioTableSelect = document.querySelectorAll("input[name='tableSelect']");
 
-let findSelected = () => {
-    let other = document.querySelectorAll(".table-line")
-    other.forEach(other=>{
-        other.classList.remove('active');
+let findSelectedTableSelect = () => {
+    let otherTableSelect = document.querySelectorAll(".table-line")
+    otherTableSelect.forEach(otherTableSelect=>{
+        otherTableSelect.classList.remove('active');
     })
-    let selected = document.querySelector("input[type='radio']:checked").value
-    let line = document.getElementById(selected)
-    line.classList.add('active')
+    let selectedTableSelect = document.querySelector("input[name='tableSelect']:checked").value;
+    let lineTableSelect = document.getElementById("tableSelect"+selectedTableSelect);
+    lineTableSelect.classList.add('active')
 }
 
-radio.forEach(radio =>{
-    radio.addEventListener("change",findSelected);
+radioTableSelect.forEach(radioTableSelect =>{
+    radioTableSelect.addEventListener("change",findSelectedTableSelect);
 })
 
-findSelected();
+const radioTableDay = document.querySelectorAll("input[name='tableDay']");
+
+let findSelectedTableDay = () => {
+    let otherTableDay = document.querySelectorAll(".table-line-day");
+    otherTableDay.forEach(otherTableDay=>{
+        otherTableDay.classList.remove('active');
+    })
+    let selectedTableDay = document.querySelector("input[name='tableDay']:checked").value;
+    let lineTableSelectDay = document.getElementById("tableDay"+selectedTableDay);
+    lineTableSelectDay.classList.add('active');
+}
+
+radioTableDay.forEach(radioTableDay =>{
+    radioTableDay.addEventListener("change",findSelectedTableDay);
+})
+
+findSelectedTableSelect();
+findSelectedTableDay();

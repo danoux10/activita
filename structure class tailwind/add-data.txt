@@ -1,0 +1,29 @@
+form
+  fieldset
+    legend
+    span
+      label
+      input:date
+    span
+      label
+      div
+        //link select add
+      div
+    div.grid .grid-cols-2 .gap-4 .mt-4
+      span
+        label
+        input:time
+      span
+        label
+        label:time
+    span.my-4
+      label
+      input:time
+    span.flex .items-center .flex-col
+      label
+      textarea
+    span.w-full .my-4 .flex .justify-around
+      button:submit
+        i
+      button:submit
+        i

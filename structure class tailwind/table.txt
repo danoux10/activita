@@ -1,0 +1,15 @@
+link selected
+div
+  (label
+    p)*6
+  label
+    input:radio
+    span
+
+link today
+div
+  (label
+    p)*6
+  label
+    input:radio
+    span
