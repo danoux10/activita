@@ -1,0 +1,347 @@
+@charset "UTF-8";
+@keyframes download {
+  from {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(150%);
+  }
+  to {
+    transform: rotate(180deg) translateY(0%);
+  }
+}
+@keyframes sphere {
+  from {
+    border-radius: 50px;
+  }
+  50% {
+    border-radius: 10px;
+  }
+  to {
+    border-radius: 50px;
+  }
+}
+@keyframes shake {
+  from {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+main#Cards section .preview {
+  margin: 5% 0;
+  padding: 0 1%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100px;
+  height: 50px;
+  transition: all ease 0.5s;
+}
+main#Cards section .preview .preview-icon {
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  transition: all ease 0.5s;
+}
+main#Cards section .preview .preview-icon svg {
+  transition: all ease 0.5s;
+  width: 100%;
+  height: 100%;
+}
+main#Cards section .preview .preview-title {
+  transition: all ease 0.5s;
+  width: 65%;
+  padding: 0 1%;
+}
+main#Cards label {
+  cursor: pointer;
+}
+main#Cards section#card-content form .head-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 50px;
+}
+main#Cards section#card-content form .head-form button {
+  position: absolute;
+}
+main#Cards section#card-content form .head-form button.btn-update {
+  left: 10%;
+}
+main#Cards section#card-content form .head-form button.btn-delete {
+  right: 10%;
+}
+main#Cards section#card-content form .head-form .search {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: space-between;
+  border-radius: 50px;
+  transition: width ease 0.5s;
+}
+main#Cards section#card-content form .head-form .search.active .input-content {
+  width: 300px;
+  transform: scale(1);
+}
+main#Cards section#card-content form .head-form .search.active .input-content input[type=text] {
+  width: 300px;
+  transform: scale(1);
+}
+main#Cards section#card-content form .head-form .search .input-content {
+  border: 1px solid red;
+  padding: 1%;
+  border-radius: 50px;
+  transition: all ease 0.5s;
+  width: 0;
+  transform: scale(0);
+}
+main#Cards section#card-content form .head-form .search .input-content input[type=text] {
+  background: transparent;
+  width: 0;
+  transform: scale(0);
+  z-index: 1;
+  padding: 0 0.5% 0 0;
+}
+main#Cards section#card-content form .head-form .search .input-content input[type=text]:focus {
+  background: rgba(128, 128, 128, 0.5);
+  border-radius: 20px;
+}
+main#Cards section#card-content form .head-form .search label {
+  background: red;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: large;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1%;
+  border: none;
+  transition: border ease 0.2s;
+}
+main#Cards section#card-content form .head-form .search label:hover {
+  border: 2px solid white;
+}
+main#Cards section#card-content form .table-body {
+  margin-top: 1%;
+  overflow: scroll;
+  height: 95%;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-radius: 10px;
+}
+main#Cards section#card-content form .table-body::-webkit-scrollbar {
+  height: 0;
+  width: 5px;
+}
+main#Cards section#card-content form .table-body::-webkit-scrollbar-thumb {
+  background: red;
+  filter: invert(1);
+  border-radius: 50px;
+}
+main#Cards section#card-content form .table-body .table-cel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  height: 80px;
+  border-right: 1px solid;
+  border-left: 1px solid;
+}
+main#Cards section#card-content form .table-body .table-cel input[type=radio] {
+  display: none;
+}
+main#Cards section#card-content form .table-body .table-cel input[type=radio]:checked ~ label {
+  filter: invert(1);
+}
+main#Cards section#cardForm-content div.form-content {
+  width: 85%;
+  margin: 0 0 0 5%;
+  padding: 1%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+main#Cards section#cardForm-content div.form-content form {
+  width: 90%;
+}
+main#Cards section#cardForm-content div.form-content form fieldset {
+  border: 1px solid;
+  border-radius: 10px;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select {
+  width: 25%;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select p {
+  margin: 0 5% 0 0;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select .select-box {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select .select-box .options-container {
+  width: 100%;
+  order: 1;
+  overflow: scroll;
+  height: 20vh;
+  background: gray;
+  position: absolute;
+  top: 3vh;
+  z-index: 1;
+  opacity: 0;
+  max-height: 0;
+  border: 1px solid red;
+  border-top: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select .select-box .options-container.active {
+  opacity: 1;
+  max-height: 100px;
+  transition: all ease 0.5s;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select .select-box .options-container.active + .selected:after {
+  transform: rotateX(180deg);
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select .select-box .options-container::-webkit-scrollbar {
+  width: 10px;
+  height: 0;
+  background: black;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select .select-box .options-container::-webkit-scrollbar-thumb {
+  background: crimson;
+  width: 100%;
+  border-radius: 50px;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select .select-box .options-container .option {
+  cursor: pointer;
+  padding: 2% 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select .select-box .options-container .option input[type=radio] {
+  display: none;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select .select-box .options-container .option label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select .select-box .options-container .option label svg {
+  width: 25%;
+  margin: 0 2% 0 0.5%;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select .select-box .selected {
+  border: 1px solid;
+  position: relative;
+  order: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 30px;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select .select-box .selected::after {
+  text-align: center;
+  content: "▼";
+  height: 100%;
+}
+main#Cards section#cardForm-content div.form-content form fieldset .select .select-box .selected div {
+  display: flex;
+}
+main#Cards section#cardForm-content div.form-content form#add-card fieldset, main#Cards section#cardForm-content div.form-content form#update-card fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 150%;
+}
+main#Cards section#cardForm-content div.form-content form#add-card fieldset legend, main#Cards section#cardForm-content div.form-content form#update-card fieldset legend {
+  text-align: center;
+  width: 15%;
+  border-right: 1px solid;
+  border-left: 1px solid;
+}
+main#Cards section#cardForm-content div.form-content form#add-card fieldset input[type=color], main#Cards section#cardForm-content div.form-content form#update-card fieldset input[type=color] {
+  background: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  margin: 0 1%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px silver;
+}
+main#Cards section#cardForm-content div.form-content form#add-card fieldset input[type=color]::-webkit-color-swatch, main#Cards section#cardForm-content div.form-content form#update-card fieldset input[type=color]::-webkit-color-swatch {
+  border-radius: 10px;
+  border: 2px solid #aefeff;
+}
+main#Cards section#cardForm-content div.form-content form#add-card fieldset input[type=color]::-webkit-color-swatch-wrapper, main#Cards section#cardForm-content div.form-content form#update-card fieldset input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+main#Cards section#cardForm-content div.form-content form#add-card fieldset input[type=text], main#Cards section#cardForm-content div.form-content form#update-card fieldset input[type=text] {
+  border-bottom: 1px solid;
+  background: none;
+  width: 50%;
+  padding-left: 1%;
+}
+main#Cards section#cardForm-content div.form-content form#add-card fieldset div, main#Cards section#cardForm-content div.form-content form#update-card fieldset div {
+  width: 90%;
+}
+main#Cards section#cardForm-content div.form-content form#add-card fieldset .color-containt, main#Cards section#cardForm-content div.form-content form#update-card fieldset .color-containt {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+main#Cards section#cardForm-content div.form-content form#add-card fieldset .color-containt span, main#Cards section#cardForm-content div.form-content form#update-card fieldset .color-containt span {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+main#Cards section#cardForm-content div.form-content form#add-card fieldset .color-containt span:nth-child(2), main#Cards section#cardForm-content div.form-content form#update-card fieldset .color-containt span:nth-child(2) {
+  flex-direction: row-reverse;
+}
+main#Cards section#cardForm-content div.form-content form#add-card .preview-content, main#Cards section#cardForm-content div.form-content form#update-card .preview-content {
+  width: 25%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main#Cards section#cardForm-content div.form-content form#add-card .preview-content legend, main#Cards section#cardForm-content div.form-content form#update-card .preview-content legend {
+  width: 50%;
+}
+main#Cards section#cardForm-content div.form-content form#add-card .preview-content label, main#Cards section#cardForm-content div.form-content form#update-card .preview-content label {
+  width: 100px;
+  height: 50px;
+}
+main#Cards section#cardForm-content div.form-content form#add-card .preview-content label svg, main#Cards section#cardForm-content div.form-content form#update-card .preview-content label svg {
+  width: 20%;
+}
+main#Cards section#cardForm-content div.form-content form#add-card .preview-update, main#Cards section#cardForm-content div.form-content form#update-card .preview-update {
+  width: 50%;
+}
+main#Cards section#cardForm-content div.form-content form#add-card .preview-update legend, main#Cards section#cardForm-content div.form-content form#update-card .preview-update legend {
+  width: 25%;
+}
+
+/*# sourceMappingURL=styleTest.css.map */

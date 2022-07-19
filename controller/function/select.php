@@ -1,6 +1,10 @@
 <?php
   $act=10;
-    //link select add actvity data
+  $bdd = new PDO('mysql:host=localhost;dbname=icon;charset=utf8', 'root', 'password');
+  
+  $iconAll = $bdd->query("SELECT * from picture");
+  
+	//link select add actvity data
     function selectAdd(){
         //sublink variable
         global $act;
@@ -40,4 +44,21 @@
                 <label for="act<?php echo $i ?>">Activity <?php echo $i ?></label>
             </div>
         <?php }
-    }?>
+    }
+
+    //link select Icon
+      function selectIcon(){
+        global $iconAll;
+        foreach ($iconAll as $iconData){
+            $iconId = $iconData['id'];
+            $iconTag = $iconData['tag'];
+            ?>
+            <div class="option option-icon">
+                <input type="radio" name="" id="icon<?php echo $iconId; ?>" value="<?php echo $iconTag; ?>" class="radio">
+                <label for="icon<?php echo $iconId; ?>" title="<?php echo $iconTag; ?>">
+                  <?php include_once "../icon/$iconTag";?>
+                </label>
+            </div>
+          <?php
+        }
+      }

@@ -66,7 +66,7 @@
         <!--sublink form & tableToday-->
         <div class="form-container w-11/12 h-full flex flex-col items-center justify-center content-around">
             <!--anchor form content-->
-            <div class="h-1/2 w-full mt-5 flex items-center justify-center" id="form-content">
+            <div class="w-full mt-5 flex items-center justify-center" id="form-content">
               <div class="flex">
                   <!--subanchor add form add data in models/form -->
 	              <?php include_once "models/form/add_data.php"; ?>

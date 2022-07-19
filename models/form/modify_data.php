@@ -11,7 +11,7 @@
         
         <!--sublink select-->
         <span class="select">
-            <label>activity : </label>
+            <p>activity : </p>
             <!--anchor select-add cf controller function select-->
             <div class="select-box">
                 <!--subanchor option container generate in controller/function/select-->

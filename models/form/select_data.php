@@ -17,7 +17,7 @@
 
         <!--sublink select-->
         <span class="select my-4">
-            <label>activity : </label>
+            <p>activity : </p>
             <!--anchor select-add cf controller function select-->
             <div class="select-box">
                 <div class="options-container" id="options-container-sel">

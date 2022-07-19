@@ -31,6 +31,7 @@
     <script src="scripts/toggleGraph.js"></script>
 
     <script src="scripts/select.js"></script>
+    <script src="scripts/tableSelect.js"></script>
     <script src="scripts/toggleBloc.js"></script>
 </body>
 </html>

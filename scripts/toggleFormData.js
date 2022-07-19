@@ -13,11 +13,11 @@ addDataBtn.classList.add('active');
 selectDataBtn.classList.add('active');
 tableDataBtn.classList.add('active');
 
-formData.classList.add('justify-around');
+formData.classList.add('justify-around','h-full');
 addData.classList.add('w-96','h-full','scale-100');
 updateData.classList.add('w-0','h-0','scale-0');
 selectData.classList.add('w-auto','h-full','scale-100');
-tableData.classList.add('w-full','h-full','scale-100');
+tableData.classList.add('w-full','h-1/2','scale-100');
 
 
 function toggleAddData(){
@@ -42,15 +42,7 @@ function toggleAddData(){
         formData.classList.add('justify-around');
         formData.classList.remove('justify-center');
     }
-    if(!addDataBtn.classList.contains('active')&&!updateDataBtn.classList.contains('active')&&!selectData.classList.contains('active')){
-       tableData.classList.add('h-full');
-       tableData.classList.remove('h-1/2');
-       formData.classList.remove('h-1/2');
-    }else{
-        tableData.classList.add('h-1/2');
-        tableData.classList.remove('h-full');
-        formData.classList.add('h-1/2');
-    }
+
 }
 
 function toggleUpdateData(){
@@ -75,15 +67,6 @@ function toggleUpdateData(){
         formData.classList.add('justify-around');
         formData.classList.remove('justify-center');
     }
-    if(!addDataBtn.classList.contains('active')&&!updateDataBtn.classList.contains('active')&&!selectData.classList.contains('active')){
-        tableData.classList.add('h-full');
-        tableData.classList.remove('h-1/2');
-        formData.classList.remove('h-1/2');
-    }else{
-        tableData.classList.add('h-1/2');
-        tableData.classList.remove('h-full');
-        formData.classList.add('h-1/2');
-    }
 }
 
 function toggleSelectData(){
@@ -95,33 +78,24 @@ function toggleSelectData(){
         selectData.classList.add('w-0','h-0','scale-0');
         selectData.classList.remove('w-auto','h-full','scale-100');
     }
-    if(!addDataBtn.classList.contains('active')&&!updateDataBtn.classList.contains('active')&&!selectData.classList.contains('active')){
-        tableData.classList.add('h-full');
-        tableData.classList.remove('h-1/2');
-        formData.classList.remove('h-1/2');
-    }else{
-        tableData.classList.add('h-1/2');
-        tableData.classList.remove('h-full');
-        formData.classList.add('h-1/2');
-    }
 }
 
 function toggleTableData(){
     tableDataBtn.classList.toggle('active');
     if(tableDataBtn.classList.contains('active')){
-        tableData.classList.add('w-full','h-full','scale-100');
+        tableData.classList.add('w-full','h-1/2','scale-100');
         tableData.classList.remove('w-0','h-0','scale-0');
 
-        formData.classList.add('flex-row');
-        formData.classList.remove('flex-col');
+        formData.classList.add('flex-row','h-1/2');
+        formData.classList.remove('flex-col','h-full');
 
         selectData.classList.remove('mt-28');
     }else{
         tableData.classList.add('w-0','h-0','scale-0');
-        tableData.classList.remove('w-full','h-full','scale-100');
+        tableData.classList.remove('w-full','h-1/2','scale-100');
 
-        formData.classList.add('flex-col');
-        formData.classList.remove('flex-row');
+        formData.classList.add('flex-col','h-full');
+        formData.classList.remove('flex-row','h-1/2');
 
         selectData.classList.add('mt-28');
     }
