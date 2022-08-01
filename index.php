@@ -27,11 +27,7 @@
     
     <script src="scripts/toggleMain.js"></script>
     
-    <script src="scripts/toggleFormData.js"></script>
-    <script src="scripts/toggleGraph.js"></script>
-
-    <script src="scripts/select.js"></script>
-    <script src="scripts/tableSelect.js"></script>
-    <script src="scripts/toggleBloc.js"></script>
+    <script src="scripts/graphScript.js"></script>
+    
 </body>
 </html>

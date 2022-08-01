@@ -46,8 +46,8 @@
         <?php }
     }
 
-    //link select Icon
-      function selectIcon(){
+    //link select Icon add
+      function selectIconAdd(){
         global $iconAll;
         foreach ($iconAll as $iconData){
             $iconId = $iconData['id'];
@@ -56,7 +56,24 @@
             <div class="option option-icon">
                 <input type="radio" name="" id="icon<?php echo $iconId; ?>" value="<?php echo $iconTag; ?>" class="radio">
                 <label for="icon<?php echo $iconId; ?>" title="<?php echo $iconTag; ?>">
-                  <?php include_once "../icon/$iconTag";?>
+                  <?php include "../icon/$iconTag";?>
+                </label>
+            </div>
+          <?php
+        }
+      }
+      
+      //link select Icon update
+      function selectIconUpdate(){
+        global $iconAll;
+        foreach ($iconAll as $iconData){
+            $iconId = $iconData['id'];
+            $iconTag = $iconData['tag'];
+            ?>
+            <div class="option option-icon">
+                <input type="radio" name="" id="icon<?php echo $iconId; ?>" value="<?php echo $iconTag; ?>" class="radio">
+                <label for="icon<?php echo $iconId; ?>" title="<?php echo $iconTag; ?>">
+                  <?php include "../icon/$iconTag";?>
                 </label>
             </div>
           <?php

@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="../css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="styleTest.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <?php include_once '../controller/function/select.php'; ?>
+    <?php require '../controller/function/select.php'; ?>
+    <?php require '../controller/function/view-card.php'; ?>
 </head>
 <body class="dark">
 <!--link navbar-->
@@ -49,8 +49,8 @@
                 <button type="submit" class="btn-update">
                     <i class="fa-solid fa-pen-clip"></i> Update data
                 </button>
-                <span class="search" id="search">
-                    <label for="search-card" id="search-button">
+                <span class="search" id="search-card">
+                    <label for="search-card" id="search-button-card">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </label>
                     <span class="input-content">
@@ -62,159 +62,19 @@
                 </button>
             </div>
 
-            <div class="grid grid-cols-6 p-3 gap-3 table-body">
-							<?php for ($i = 1; $i < 50; $i++) { ?>
-                  <div class="table-cel">
-                      <input type="radio" name="card" value="<?php echo $i;?>" id="<?php echo $i; ?>">
-                      <label class="preview" id="card<?php echo $i; ?>" style="background: #880000; fill: #fff; stroke: #fff; color: #fff"  for="<?php echo $i; ?>">
-                          <span class="preview-icon">
-                              <?php include '../icon/0.svg';?>
-                          </span>
-                          <span class="preview-tilte">
-                              <p>Coding</p>
-                          </span>
-                      </label>
-                  </div>
-                            <?php } ?>
+            <div class="p-3 flex flex-wrap justify-around items-start table-body">
+                <?php echo viewCard() ?>
             </div>
         </form>
     </section>
-    <!--work now-->
+  
     <section class="w-3/6 h-full flex items-center justify-between" id="cardForm-content">
     <!--sublink btn container graphForm-->
-    <div class="form-content flex justify-center items-center flex-col">
-        <form action="" id="add-card">
-            <fieldset class="">
-                <legend>New Card</legend>
-                
-                <div class="color-containt">
-                    <span class="">
-                        <label for="color-bg">Background</label>
-                        <input type="color" name="color-bg" id="color-bg" value="#880000">
-                        <label for="color-bg" id="bg-value"></label>
-                    </span>
-
-                    <span class="">
-                        <label for="color-text">Color</label>
-                        <input type="color" name="color-text" id="color-text" value="#ffffff">
-                        <label for="color-text" id="text-value"></label>
-                    </span>
-                </div>
-                
-                <div class="flex w-full justify-around items-center">
-                    <span>
-                        <label for="card-title">Title Card :</label>
-                        <input type="text" oninput="bis(this)" id="card-title" name="card-title" placeholder="Coding">
-                    </span>
-
-                    <span class="flex items-center justify-around select">
-                        <p>Icon</p>
-                        <div class="select-box">
-                        <!--subanchor option container generate in controller/function/select-->
-                            <div class="options-container" id="options-container-icon">
-                                <?php echo selectIcon()?>
-                            </div>
-
-                            <!--subanchor Selected-->
-                            <div class="selected" id="select-icon">
-                                <div id="selected-icon">
-                                    0.svg
-                                </div>
-                            </div>
-                        </div>
-                    </span>
-                </div>
-                
-                
-                <div class="flex w-full justify-around">
-                    <button type="submit" class="btn-valid">
-                        <i class="fa-solid fa-check"></i>
-                        Add Card
-                    </button>
-                </div>
-                
-                <fieldset class="preview-content">
-                    <legend>preview</legend>
-                    <div class="preview" id="preview-add">
-                        <span id="preview-icon-add" class="preview-icon">
-                            <?php include '../icon/0.svg'?>
-                        </span>
-                        <span id="preview-title-add" class="preview-title">
-                            <p>Coding</p>
-                        </span>
-                    </div>
-                </fieldset>
-            </fieldset>
-        </form>
-        <form action="" id="update-card">
-            <fieldset class="">
-                <legend>Update Card</legend>
-                
-                <div class="color-containt">
-                    <span class="">
-                        <label for="color-bg">Background</label>
-                        <input type="color" name="color-bg" id="color-bg-update">
-                        <label for="color-bg" id="bg-value-update"></label>
-                    </span>
-
-                    <span class="">
-                        <label for="color-text">Color</label>
-                        <input type="color" name="color-text" id="color-text-update">
-                        <label for="color-text" id="text-value-update"></label>
-                    </span>
-                </div>
-                
-                <div class="flex w-full justify-around items-center">
-                    <span>
-                        <label for="card-title">Title Card :</label>
-                        <input type="text" oninput="" id="card-title-update" name="card-title">
-                    </span>
-
-                    <span class="flex items-center justify-around select">
-                        <p>Icon</p>
-                        <div class="select-box">
-                        <!--subanchor option container generate in controller/function/select-->
-                            <div class="options-container" id="options-container-icon-update">
-                                <?php echo selectIcon()?>
-                            </div>
-
-                            <!--subanchor Selected-->
-                            <div class="selected" id="select-icon">
-                                <div id="selected-icon-update">
-                                    0.svg
-                                </div>
-                            </div>
-                        </div>
-                    </span>
-                </div>
-                
-                
-                <div class="flex w-full justify-around">
-                    <button type="submit" class="btn-update">
-                        <i class="fa-solid fa-pen-clip"></i>
-                        update
-                    </button>
-                </div>
-                
-                <fieldset class="preview-content preview-update">
-                    <legend>preview</legend>
-                    <div class="flex justify-around" id="preview-update">
-                        <div id="old-card" class="preview">
-                        
-                        </div>
-                        <div id="new-card" class="preview">
-                            <span id="preview-icon-update-new" class="preview-icon">
-                                <?php include '../icon/0.svg'?>
-                            </span>
-                            <span id="preview-title-update-new" class="preview-tilte">
-                                <p>Coding</p>
-                            </span>
-                        </div>
-                        
-                    </div>
-                </fieldset>
-            </fieldset>
-        </form>
+    <div class="form-content flex justify-around items-center flex-col">
+        <?php
+            include_once '../models/form/add_card.php';
+            include_once '../models/form/update_card.php';
+        ?>
     </div>
     <div class="btn-container mr-2.5">
         <ul>
@@ -236,12 +96,13 @@
 <script src="../scripts/select.js"></script>
 
 <!--test-->
-<script src="search.js"></script>
-<script src="toggleBloc.js"></script>
-<script src="select.js"></script>
-<script src="preview.js"></script>
+<script src="cardScript.js"></script>
+<!--<script src="search.js"></script>-->
+<!--<script src="toggleBloc.js"></script>-->
+<!--<script src="select.js"></script>-->
+<!--<script src="preview.js"></script>-->
 
-<script src="selectCard.js"></script>
-
+<!--<script src="selectCard.js"></script>-->
+<!--<script src="toggleForm.js"></script>-->
 </body>
 </html>

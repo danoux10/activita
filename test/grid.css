@@ -1,0 +1,25 @@
+body {
+  background: #000;
+  color: #fff;
+}
+
+.first {
+  height: 90vh;
+}
+.first .second {
+  border: 1px solid red;
+  margin: 3% 5% 0;
+  height: 90vh;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.first .second .all {
+  margin: 1%;
+  border: 1px solid lime;
+  border-radius: 10px;
+  width: 150px;
+  height: 80px;
+}
+
+/*# sourceMappingURL=grid.css.map */
